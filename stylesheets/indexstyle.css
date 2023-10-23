@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Roboto:wght@300&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Zen+Maru+Gothic&family=Zilla+Slab:wght@300;400&display=swap'); 
+  a:link {
+    color: #57b1dc;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #1089c2;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover, a:focus {
+    color: red;
+    text-shadow: 0 0 2px #fff, 0 0 5px rgba(98, 198, 245, .15);
+  }
+
+  ul{
+      color:azure;
+      font-size: 1em;
+      list-style-type: none;
+      
+  }
+  li{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body{ 
+      background-color: #111111; 
+      margin: 0 10%; 
+      font-family: sans-serif; 
+  
+      }
+  
+  h1 { 
+      text-align: center;
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold; 
+      text-transform: uppercase; 
+      letter-spacing: .25em;
+      color: #FAB42A;
+      } 
+  h5 {
+      border-bottom: 1px solid #37EEFB; 
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      padding-bottom: 1.5em;
+      text-align: center;
+      color: azure;
+      font-size: 1em;
+  }
+  h2 { 
+          color: #FAB42A; 
+          font-size: 2.75em;
+          font-family: 'Fira Sans Condensed', sans-serif;
+          }
+ 
+  footer { border-top: 1px solid #37EEFB;  text-align: center;  padding-top: 1em; 
+    } 
+    
+  h3 { 
+    border-top: 1px solid #37EEFB; 
+    padding-top: 1em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #FAB42A; 
+    font-size: 1.5em;
+          }
+      
+  p { 
+          color:azure;
+          font-size: 1.25em;
+          font-family: 'Roboto', sans-serif;
+          }
+          
+  footer {   text-align: center;  padding-top: 1em; 
+          }
+  footer img{
+      Width: 50px; height: 50px; 
+      margin-left: 10px; margin-right: 10px;
+  }
+  img{
+      text-align: center;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@1,200&display=swap');
+  .thumbnail {
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    display: flex;
+    flex: 1 1 50px;
+    justify-content: center;
+  }
+  .thumbnail img {
+    max-width: 100%; /* Ensure the images don't exceed the column width */
+    height: auto; 
+    scale: 1.1
+}
+  #me{
+    padding-top: 20px;
+    
+  }
+  .education-list ul {
+    margin-left: 23px; 
+    font-size: 1.25em;
+}
+h4{
+  color: azure;
+  font-size: 1.5em;
+  margin-left: 25px;
+}
+.websiteimage{
+  text-align: center;
+}
+.highlight{
+ color:#FAB42A;
+ font-size: 1.15em;
+ list-style-type: none;
+ font-weight: bold;
+ line-height: 1.5em;
+}
+.education{
+  list-style: none;
+  line-height: 2em;
+}
+.coursework{
+  font-size: 10px;
+}
+.education-list .education ul {
+  margin-left: 23px; /* Adjust this value as needed */
+  font-size: 1em; /* You can adjust the font size as well */
+  
+  padding-bottom: 5px;
+}
+
+/* Add specific margin for the coursework list */
+.education-list .education ul .coursework {
+  margin-left: 20px; /* Adjust this value as needed */
+  font-size: 20px; /* You can adjust the font size as well */
+
+  padding-left: 40px;
+}
+.intro {
+  border-bottom: 1px solid #37EEFB;
+  padding-bottom: 2em; /* Adjust this value to control the space between content and the border */
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  line-height: 1.65; /* Adjust the line height to improve readability */
+  text-align: justify; /* Justify text to prevent long string of lines at the end */
+  text-justify: inter-word; /* Specify that only spaces should be adjusted for justification */
+  font-size: 1.65em;
+}
+.back-link {
+  margin-right: 100px; /* Adjust this value to control the space between the links */padding: 50px;
+}
+.about-me-container {
+  display: flex;
+  align-items: center;
+}

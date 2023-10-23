@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap');
+a:link 
+{
+    color: #57b1dc;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited 
+  {
+    color: #1089c2;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover, a:focus, a:active{
+    color: #62C6F5;
+    text-shadow: 0 0 2px #fff, 0 0 5px rgba(98, 198, 245, .15);
+  }
+  body{ 
+      background-color: #0f0f0f; 
+   
+  }
+  h1 { 
+      text-align: center;
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold; 
+      text-transform: uppercase; 
+      letter-spacing: 15px;
+      font-size: 30px;
+      
+      padding-bottom: 25px;
+      padding-top: 5px;
+
+      color: #FA5843;
+      border-bottom: 1px solid #37EEFB;
+      } 
+          .column {
+            vertical-align: middle;
+            flex: 25%;
+            max-width: 45%;
+            padding: 0 25px;
+            text-align: center;
+          }
+          .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+          }
+          .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+          }
+          footer { border-top: 1px 
+            solid #37EEFB;  
+            text-align: center;  
+            padding-top: 1em; 
+            font-family: 'Fira Sans Condensed', sans-serif;
+            
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 30px;
+            padding-bottom: 1em;
+  } 
+  h2{
+    color:aliceblue;
+    text-align: center;
+    border-bottom: 1px solid #37EEFB;
+    padding-bottom: 25px;
+  }
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    }}
+
+ 
+
+    .thumbnail img{
+      margin-top: 8px;
+      vertical-align: middle;
+      
+      transition: transform 0.3s; /* Add a smooth transition effect on hover */
+    }
+    .thumbnail img:hover{
+      transform: scale(1.05); /* Scale the image by 10% on hover (adjust as needed) */
+    }

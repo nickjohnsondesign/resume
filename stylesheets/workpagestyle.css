@@ -1,0 +1,56 @@
+
+a:link {
+    color: #57b1dc;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #1089c2;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover, a:focus, a:active{
+    color: #62C6F5;
+    text-shadow: 0 0 2px #fff, 0 0 5px rgba(98, 198, 245, .15);
+  }
+
+    
+    body{ 
+        background-color: #131313; 
+        margin: 0 10%; 
+        font-family: sans-serif; 
+        }
+    
+    h1 { 
+        text-align: center;
+        font-family: 'Archivo', sans-serif;
+        font-weight: bold; 
+        text-transform: uppercase; 
+        letter-spacing: 15px;
+        font-size: 30px;
+        margin-top: 30px;
+        padding-bottom: 25px;
+  
+        color: #FA5843;
+        border-bottom: 1px solid #37EEFB;
+        } 
+        
+        p { 
+          text-align: center;
+          font-family: 'Fira Sans Condensed', sans-serif;
+        
+        
+        border-bottom: 1px solid #37EEFB; 
+        padding-bottom: 1em;
+        margin-top: 1em;
+        font-size: 1.25em;
+        color: azure;
+            }
+            img {
+              margin: auto;
+              display: grid;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100vh;
+                
+              }
