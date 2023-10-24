@@ -27,7 +27,7 @@
   
   body{ 
       background-color: #111111; 
-      margin: 0 10%; 
+      margin: 0 15%; 
       font-family: sans-serif; 
   
       }
@@ -41,7 +41,7 @@
       color: #FAB42A;
       } 
   h5 {
-      border-bottom: 1px solid #37EEFB; 
+  
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       padding-bottom: 1.5em;
       text-align: center;
@@ -155,6 +155,14 @@ h4{
   display: flex;
   align-items: center;
 }
+.sectionedu {
+  border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
+padding-bottom: 20px;
+}
+.sectionlists {
+  border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
+padding-bottom: 20px;
+}
 .section p {
   text-indent: 0;
   line-height: 1.5; /* Optionally, adjust line height as needed */
@@ -164,34 +172,25 @@ h4{
 }
 /* Style the two-column layout */
 .column-layout {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px; /* Adjust the gap between columns as needed */
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px; /* Add margin for spacing */
+  text-align: left;
 }
 
 .column {
-  background-color: #333; /* Add background color as needed */
-  padding: 20px; /* Add padding for spacing and readability */
-  border: 1px solid #37EEFB; /* Add a border for separation */
+  flex-basis: calc(50% - 10px); /* Adjust the width of columns and add spacing */
+  
 }
 
-.column h2 {
-  color: #FAB42A;
-  font-size: 1.5em;
-  font-family: 'Fira Sans Condensed', sans-serif;
-}
+.skills-list, .software-list {
+  list-style-type: none; /* Remove bullet points */
+  font-size: 1.2em; /* Optionally, adjust the font size as needed */
+  margin-left: 0; /* Remove margin */
+  padding-left: 0; /* Remove left padding */
 
-.column ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.column li {
-  color: azure;
-  font-size: 1em;
-  margin-bottom: 10px; /* Add space between list items */
-}
+  }
 
 /* Additional styling as needed */
 /* Style the "Scroll to Top" button */
@@ -239,11 +238,10 @@ h4{
   opacity: 1;
   transform: translateY(0); /* Optionally, add a scaling effect */
 }
-.scrollToTopBtn:hover {
-
-}
 header {
-  background-color: #333; /* Change the background color as needed */
+margin-left: 20px;
+background-color: #111111;
+border-bottom: #37EEFB solid 1px;
 }
 
 .main-nav {
@@ -274,7 +272,7 @@ header {
 .sub-nav {
   display: none;
   position: absolute; /* Position the sub-navigation absolutely */
-  background-color: #333; /* Change the background color as needed */
+  background-color: #111111;
   z-index: 1;
   top: 100%; /* Position it below the parent element */
   left: 0; /* Align it with the left edge of the parent element */
@@ -297,7 +295,7 @@ header {
   display: block; /* Display each item on a new line */
 }
 .main-nav ul li:hover, .main-nav ul li a:hover {
-  background-color: #333; /* Change to the desired darker color */
+
   transition: background-color 0.3s; /* Add a smooth transition effect */
 }
 .centered-text {
@@ -309,4 +307,31 @@ header {
   flex: 1; /* Equal distribution of space among items */
   text-align: center; /* Center-align the text within each item */
   padding: 10px; /* Adjust as needed for spacing */
+  list-style-type: none; /* Remove bullet points */
+  position: relative; /* Position for pseudo-elements */
+
+  /* Customize the glow color and other text styles */
+  font-weight: bold;
+
+  /* Glowing effect animation */
+  transition: text-shadow 0.3s; /* Add a smooth transition effect */
+}
+.nav-item:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adjust the glow color and size as needed */
+}
+/* Define the glowing animation */
+@keyframes glowing {
+  0% {
+    color: #57b1dc; /* Initial text color */
+  }
+  50% {
+    color: #FAB42A; /* Glowing text color */
+  }
+  100% {
+    color: #57b1dc; /* Return to the initial text color */
+  }
+}
+.websiteimage img{
+  text-wrap: nowrap;
+  
 }

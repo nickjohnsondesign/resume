@@ -296,57 +296,141 @@ footer a:last-child {
   }
   
   /* Show the button when you scroll down */
+  .scrollToTopBtn {
+    position: fixed;
+    bottom: 30px; /* Adjust the distance from the bottom as needed */
+    right: 30px; /* Adjust the distance from the right as needed */
+    z-index: 1000; /* Ensure the button is above other content */
+  
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1; /* Make the button visible */
+    transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FAB42A;
+   /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+    background-size: 30px; /* Adjust the size of the arrow icon */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the arrow icon */
+    animation: fadeIn 0.5s ease;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Show the button when you scroll down */
   .show-button {
     display: block;
     opacity: 1;
     transform: translateY(0); /* Optionally, add a scaling effect */
   }
-  .scrollToTopBtn:hover {
-  
-  }
   header {
-    background-color: #333; /* Change the background color as needed */
-}
-
-.main-nav {
+  margin-left: 20px;
+  background-color: #111111;
+  border-bottom: #37EEFB solid 1px;
+  }
+  
+  .main-nav {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-}
-
-.main-nav ul {
+  }
+  
+  .main-nav ul {
     list-style: none;
     padding: 0;
-}
-
-.main-nav ul li {
+  }
+  
+  .main-nav ul li {
     display: inline;
     position: relative;
-}
-
-.main-nav ul li a {
+  }
+  
+  .main-nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-}
-
-.sub-nav {
+  }
+  
+  .main-nav ul li:hover .sub-nav {
+    display: block;
+  }
+  
+  .sub-nav {
     display: none;
-    position: absolute;
-    background-color: #333; /* Change the background color as needed */
+    position: absolute; /* Position the sub-navigation absolutely */
+    background-color: #111111;
     z-index: 1;
-}
-
-.main-nav ul li:hover .sub-nav {
-    display: block;
-}
-
-.sub-nav li {
+    top: 100%; /* Position it below the parent element */
+    left: 0; /* Align it with the left edge of the parent element */
+    font-size: .75em;
+  }
+  
+  .main-nav ul li {
+    display: inline;
+    position: relative; /* Position the parent relative to allow absolute positioning for the sub-navigation */
+  }
+  
+  .sub-nav li {
     display: block;
     padding: 10px;
-}
-
-.sub-nav li a {
+  }
+  
+  .sub-nav li a {
     color: #fff;
     text-decoration: none;
-}
+    display: block; /* Display each item on a new line */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main-nav ul li:hover, .main-nav ul li a:hover {
+  
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+  }
+  .centered-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-item {
+    flex: 1; /* Equal distribution of space among items */
+    text-align: center; /* Center-align the text within each item */
+    padding: 10px; /* Adjust as needed for spacing */
+    list-style-type: none; /* Remove bullet points */
+    position: relative; /* Position for pseudo-elements */
+  
+    /* Customize the glow color and other text styles */
+    font-weight: bold;
+  
+    /* Glowing effect animation */
+    transition: text-shadow 0.3s; /* Add a smooth transition effect */
+  }
+  .nav-item:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adjust the glow color and size as needed */
+  }
+  /* Define the glowing animation */
+  @keyframes glowing {
+    0% {
+      color: #57b1dc; /* Initial text color */
+    }
+    50% {
+      color: #FAB42A; /* Glowing text color */
+    }
+    100% {
+      color: #57b1dc; /* Return to the initial text color */
+    }
+  }
