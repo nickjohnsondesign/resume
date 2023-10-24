@@ -11,10 +11,10 @@ a:link
     background-color: transparent;
     text-decoration: underline;
   }
-  a:hover, a:focus, a:active{
-    color: #62C6F5;
-    text-shadow: 0 0 2px #fff, 0 0 5px rgba(98, 198, 245, .15);
-  }
+  a:hover, a:focus, a:active {
+    color:#FAB42A;
+    text-shadow: 0 0 2px #ffd500, 0 0 5px rgba(98, 198, 245, 0.15);
+}
   body{ 
       background-color: #0f0f0f; 
    
@@ -30,7 +30,7 @@ a:link
       padding-bottom: 25px;
       padding-top: 5px;
 
-      color: #FA5843;
+      color:#FAB42A;
       border-bottom: 1px solid #37EEFB;
       } 
           .column {
@@ -91,3 +91,50 @@ a:link
     .thumbnail img:hover{
       transform: scale(1.05); /* Scale the image by 10% on hover (adjust as needed) */
     }
+    .scrollToTopBtn {
+      position: fixed;
+      bottom: 20px; /* Adjust the distance from the bottom as needed */
+      right: 20px; /* Adjust the distance from the right as needed */
+      z-index: 1000; /* Ensure the button is above other content */
+    
+      color: #fff; /* White text color */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 1; /* Make the button visible */
+      transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #FAB42A;
+     /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+      background-size: 30px; /* Adjust the size of the arrow icon */
+      background-repeat: no-repeat;
+      background-position: center; /* Center the arrow icon */
+      animation: fadeIn 0.5s ease;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Show the button when you scroll down */
+    .show-button {
+      display: block;
+      opacity: 1;
+      transform: translateY(0); /* Optionally, add a scaling effect */
+    }
+    .scrollToTopBtn:hover {
+    
+    }
+    

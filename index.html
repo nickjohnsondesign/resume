@@ -10,9 +10,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/indexstyle.css">
+    <script src="returnbutton.js"></script>
+
 </head>
 
 <body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="sample.html">Illustration and Designs</a>
+                    <ul class="sub-nav">
+                        <li><a href="work_pages/workpage_characterdesign.html">Character Design</a></li>
+                        <li><a href="work_pages/workpage_compost.html">Compost Art</a></li>
+                        <li><a href="work_pages/workpage_hatching.html">Hatcing Sketch</a></li>
+                        <li><a href="work_pages/workpage_jax.html">Dog Illustration</a></li>
+                        <li><a href="work_pages/workpage_logo.html">Graphic Logo</a></li>
+                        <li><a href="work_pages/workpage_card.html">Post Card Mockup</a></li>
+                        <li><a href="work_pages/workpage_photoshop.html">Photoshop Work</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="design.html">Websites and Wireframes</a>
+                    <ul class="sub-nav">
+                        <li><a href="https://nickjohnsondesign.github.io/artprompt/">Sketch.Prompt</a> </li>
+                        <li><a href="work_pages/workpage_wireframe.html">Low Fidelity Wireframe</a></li>
+                        <li><a href="work_pages/workpage_wireframe_2.html">High Fidelity Wireframe</a></li>
+                        <!-- Add more sub-menu items as needed -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="content-container">
         <h1>Nicholas Johnson<br>
             <img id="me" src="images/me.png" alt="" height="350px" width="350px"></h1>
@@ -27,7 +56,7 @@
     
         </p>
     
-        <div class="column-layout">
+       
             <div class="section">
                 <h2>Education</h2>
                 <ul>
@@ -40,11 +69,11 @@
                     <li><span class="highlight">UX Design Professional Certification</span> - Google (Pursuing)</li>
                 </ul>
             </div>
-    
-            <div class="section">
+            <div class="column-layout">
+            <div class="column">
                 <h2>Skill Set</h2>
                 <ul>
-                    <li>Design</li>
+                    <li>Design</li=9>
                     <li>Illustration</li>
                     <li>Video Editing</li>
                     <li>Image Editing</li>
@@ -56,8 +85,9 @@
                     <li>Time Management</li>
                 </ul>
             </div>
-    
-            <div class="section">
+            </div>
+            <div class="column-layout">
+            <div class="column">
                 <h2>Software</h2>
                 <ul>
                     <li>Krita</li>
@@ -75,20 +105,21 @@
                 </ul>
             </div>
         </div>
+        </div>
     </div>
     <div class="section">
         <h2>Employment</h2>
         <ul>
             <li>
                 <span class="highlight"><strong>Freelance Illustration and Design</span></strong><br>
-                <p style="text-indent: 20px; line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
                     Engage with clients directly and professionally and deliver design and illustration solutions that fit their needs.<br>
                     Worked and adhered to a self-imposed schedule and delivered solutions to clients on time.
                 </p>
             </li>
             <li>
                 <span class="highlight"><strong>Prepcook/Dishwasher, NYPD Pizza</strong></span><br>
-                <p style="text-indent: 20px; line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
                     Work through extremely busy nights to provide customers with a satisfactory experience.<br>
                     Engage with teammates to expedite work duties as quickly as possible.<br>
                     Prepare food and ingredients for service.<br>
@@ -97,7 +128,7 @@
             </li>
             <li>
                 <span class="highlight"><strong>Prepcook, 99 Restaurants</strong></span><br>
-                <p style="text-indent: 20px; line-height: 1.5; font-size: 1.1em; list-style-type: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: 1.1em; list-style-type: none; margin-left: 1.5em;">
                     Collaborated with the kitchen team to ensure efficient workflow during busy shifts.<br>
                     Maintained a clean and organized kitchen workspace.<br>
                     Assisted in food preparation, ensuring all ingredients were ready for service.
@@ -117,7 +148,7 @@
     <a href="work_pages/workpage_photoshop.html"><img src="thumbnail/womanphotoshopthumbnail.png" alt=""></a>
   </h3>
 
-<h3>Websites and Wireframe</h3>
+<h3><a href="design.html">Websites and Wireframe</a></h3>
 <h3 class="websiteimage">
     <a href="https://nickjohnsondesign.github.io/artprompt/" target="_blank"><img src="images/Prompt.png" alt="" height="256px"></a> 
     <a href="work_pages/workpage_wireframe.html" target="_blank"><img src="images/wireframe2.png" alt="" height="256px"></a>
@@ -129,4 +160,5 @@
 <footer><nav><ul>
     <a href="https://www.linkedin.com/in/nicholas-johnson-design" target="_blank"><img src="images/linkedig-256.png" alt="LinkedIn"></a>
     <a href="https://www.github.com/nickjohnsondesign" target="_blank"><img src="images/github-256.png" alt="github" ></a>
+    <button class="scrollToTopBtn" style="background-image: url('thumbnail/arrow.png')" onclick="scrollToTop()"></button>
 </ul></div></nav></nav>

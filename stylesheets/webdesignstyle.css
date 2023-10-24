@@ -1,0 +1,352 @@
+/* stylesheets/webdesignstyle.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Roboto:wght@300&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Zen+Maru+Gothic&family=Zilla+Slab:wght@300;400&display=swap');
+
+body {
+    background-color: #111111;
+    margin: 0 10%;
+    font-family: sans-serif;
+}
+
+a:link {
+    color: #57b1dc;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #1089c2;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    color:#FAB42A;
+    text-shadow: 0 0 2px #ffd500, 0 0 5px rgba(98, 198, 245, 0.15);
+}
+
+ul {
+    color: azure;
+    font-size: 1em;
+    list-style-type: none;
+}
+
+li {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #FAB42A;
+}
+
+h5 {
+    border-bottom: 1px solid #37EEFB;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 1.5em;
+    text-align: center;
+    color: azure;
+    font-size: 1em;
+}
+
+h2 {
+    color: #FAB42A;
+    font-size: 2.75em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+footer {
+    border-top: 1px solid #37EEFB;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h3 {
+    border-top: 1px solid #37EEFB;
+    padding-top: 1em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #FAB42A;
+    font-size: 1.5em;
+}
+
+p {
+    color: azure;
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.25em;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img {
+    text-align: center;
+    height: 250px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@1,200&display=swap');
+
+.thumbnail {
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    display: flex;
+    flex: 1 1 50px;
+    justify-content: center;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    scale: 1.1;
+}
+
+#me {
+    padding-top: 20px;
+}
+
+.education-list ul {
+    margin-left: 23px;
+    font-size: 1.25em;
+}
+
+h4 {
+    color: azure;
+    font-size: 1.5em;
+    margin-left: 25px;
+}
+
+.websiteimage {
+    text-align: center;
+}
+
+.highlight {
+    color: #FAB42A;
+    font-size: 1.15em;
+    list-style-type: none;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.education {
+    list-style: none;
+    line-height: 2em;
+}
+
+.coursework {
+    font-size: 10px;
+}
+
+.education-list .education ul {
+    margin-left: 23px;
+    font-size: 1em;
+    padding-bottom: 5px;
+}
+
+.education-list .education ul .coursework {
+    margin-left: 20px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.intro {
+    border-bottom: 1px solid #37EEFB;
+    padding-bottom: 2em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    line-height: 1.65;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.65em;
+}
+
+.back-link {
+    margin-right: 100px;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+}
+.hfimg {
+    padding-bottom: 20px; /* Adjust the value to control the padding */
+    margin-bottom: 1em;
+}
+h3.hf {
+    margin-bottom: 20px; /* Adjust the value to control the margin */
+}
+.hfwf {
+    padding-bottom: 20px;
+}
+
+.wireframe-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wireframe-content img {
+    max-width: 100%; /* Adjust the image size as needed */
+    height: auto;
+    margin-right: 20px; /* Add some spacing between the image and text */
+}
+
+.wireframe-content a {
+    max-width: 50%; /* Limit the width of the anchor element */
+    text-align: center; /* Center the anchor element */
+    margin: 0 auto; /* Center the anchor element horizontally */
+    display: inline-block; /* Change to inline-block to maintain the anchor element's size */
+    vertical-align: middle; /* Align vertically with the image */
+    
+}
+
+.wireframe-content p {
+    flex: 1;
+    color: azure;
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+}
+.hfwf p{
+    padding-left: 50px;
+    padding-right: 30px;
+    font-size: 1.5em;
+    line-height: 1.35em;
+}
+
+.wireframe2-content {
+    display: flex;
+    align-items: center;
+}
+
+.wireframe2-content a {
+    width: 660px; /* Make the anchor tag take up the full width of its parent */
+    max-width: 100%;
+    height: autos;
+    text-align: center; /* Center the anchor element */
+}
+
+.wireframe2-content img {
+    max-width: 60%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.wireframe2-content p {
+    flex: 1;
+    color: azure;
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+}
+footer a {
+    margin-right: 20px;
+}
+footer a:last-child {
+    margin-right: 0;
+}
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 1000; /* Ensure the button is above other content */
+  
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1; /* Make the button visible */
+    transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FAB42A;
+   /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+    background-size: 30px; /* Adjust the size of the arrow icon */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the arrow icon */
+    animation: fadeIn 0.5s ease;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Show the button when you scroll down */
+  .show-button {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Optionally, add a scaling effect */
+  }
+  .scrollToTopBtn:hover {
+  
+  }
+  header {
+    background-color: #333; /* Change the background color as needed */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+    position: relative;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sub-nav {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Change the background color as needed */
+    z-index: 1;
+}
+
+.main-nav ul li:hover .sub-nav {
+    display: block;
+}
+
+.sub-nav li {
+    display: block;
+    padding: 10px;
+}
+
+.sub-nav li a {
+    color: #fff;
+    text-decoration: none;
+}
