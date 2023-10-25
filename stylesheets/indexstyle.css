@@ -73,39 +73,43 @@
           
   footer {   text-align: center;  padding-top: 1em; 
           }
-  footer img{
-      Width: 50px; height: 50px; 
-      margin-left: 10px; margin-right: 10px;
-  }
+footer img{
+  width: 6em; height: 6em;
+}
   img{
       text-align: center;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@1,200&display=swap');
-  .thumbnail {
-    text-align: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    display: flex;
-    flex: 1 1 50px;
-    justify-content: center;
-  }
-  .thumbnail img {
-    max-width: 100%; /* Ensure the images don't exceed the column width */
-    height: auto; 
-    scale: 1.1
+
+  .content-container {
+    width: 100%;
+}
+.thumbnail {
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.8em;
+  display: flex;
+  flex: 1 1 2em;
+  justify-content: center;
+  margin-bottom: 1.5em; /* Add margin to separate the two lines of thumbnails */
+}
+
+.thumbnail img {
+  max-width: 100%;
+  height: auto;
+  scale: 1.1;
 }
   #me{
-    padding-top: 20px;
+    padding-top: 1em;
     
   }
   .education-list ul {
-    margin-left: 23px; 
+    margin-left: 1em; 
     font-size: 1.25em;
 }
 h4{
   color: azure;
   font-size: 1.5em;
-  margin-left: 25px;
+  margin-left: 1em;
 }
 .websiteimage{
   text-align: center;
@@ -121,22 +125,20 @@ h4{
   list-style: none;
   line-height: 2em;
 }
-.coursework{
-  font-size: 10px;
-}
+
 .education-list .education ul {
-  margin-left: 23px; /* Adjust this value as needed */
+  margin-left: 1em; /* Adjust this value as needed */
   font-size: 1em; /* You can adjust the font size as well */
   
-  padding-bottom: 5px;
+  padding-bottom: 1em;
 }
 
 /* Add specific margin for the coursework list */
 .education-list .education ul .coursework {
-  margin-left: 20px; /* Adjust this value as needed */
-  font-size: 20px; /* You can adjust the font size as well */
+  margin-left: 1em; /* Adjust this value as needed */
+  font-size: 1em; /* You can adjust the font size as well */
 
-  padding-left: 40px;
+  padding-left: 2em;
 }
 .intro {
   border-bottom: 1px solid #37EEFB;
@@ -149,7 +151,7 @@ h4{
   font-size: 1.65em;
 }
 .back-link {
-  margin-right: 100px; /* Adjust this value to control the space between the links */padding: 50px;
+  margin-right: 3em; /* Adjust this value to control the space between the links */padding: 50px;
 }
 .about-me-container {
   display: flex;
@@ -157,11 +159,11 @@ h4{
 }
 .sectionedu {
   border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
-padding-bottom: 20px;
+padding-bottom: 1em;
 }
 .sectionlists {
   border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
-padding-bottom: 20px;
+padding-bottom: 1em;
 }
 .section p {
   text-indent: 0;
@@ -175,7 +177,7 @@ padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px; /* Add margin for spacing */
+  margin-top: 1em; /* Add margin for spacing */
   text-align: left;
 }
 
@@ -197,29 +199,31 @@ padding-bottom: 20px;
 /* Style the "Scroll to Top" button */
 .scrollToTopBtn {
   position: fixed;
-  bottom: 30px; /* Adjust the distance from the bottom as needed */
-  right: 30px; /* Adjust the distance from the right as needed */
-  z-index: 1000; /* Ensure the button is above other content */
-
-  color: #fff; /* White text color */
+  bottom: 1.5em;
+  right: 1.5em;
+  z-index: 1000;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: .5em 1em;
+  border-radius: .25em;
   cursor: pointer;
-  opacity: 1; /* Make the button visible */
-  transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
-  width: 60px;
-  height: 60px;
+  opacity: 0.5; /* Set initial opacity to 0.5 */
+  transition: opacity 0.3s, transform 0.3s; /* Add a transition for both opacity and transform */
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   background-color: #FAB42A;
- /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
-  background-size: 30px; /* Adjust the size of the arrow icon */
+  background-size: 1.5em;
   background-repeat: no-repeat;
-  background-position: center; /* Center the arrow icon */
+  background-position: center;
   animation: fadeIn 0.5s ease;
   display: none;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Grow the button on hover */
+.scrollToTopBtn:hover {
+  opacity: 1; /* Set opacity to 1 on hover */
+  transform: scale(1.2); /* Grow the button by 20% when hovered */
 }
 @keyframes fadeIn {
   from {
@@ -239,9 +243,10 @@ padding-bottom: 20px;
   transform: translateY(0); /* Optionally, add a scaling effect */
 }
 header {
-margin-left: 20px;
-background-color: #111111;
-border-bottom: #37EEFB solid 1px;
+  margin-left: 1em;
+  background-color: #111111;
+  border-bottom: 1px solid #37EEFB;
+  padding-top: 20px; /* Add padding to the top (adjust the value as needed) */
 }
 
 .main-nav {
@@ -286,7 +291,7 @@ border-bottom: #37EEFB solid 1px;
 
 .sub-nav li {
   display: block;
-  padding: 10px;
+  padding: .5em;
 }
 
 .sub-nav li a {
@@ -295,7 +300,7 @@ border-bottom: #37EEFB solid 1px;
   display: block; /* Display each item on a new line */
 }
 .main-nav ul li:hover, .main-nav ul li a:hover {
-
+  color: #FAB42A;
   transition: background-color 0.3s; /* Add a smooth transition effect */
 }
 .centered-text {
@@ -306,7 +311,7 @@ border-bottom: #37EEFB solid 1px;
 .nav-item {
   flex: 1; /* Equal distribution of space among items */
   text-align: center; /* Center-align the text within each item */
-  padding: 10px; /* Adjust as needed for spacing */
+  padding: .5em; /* Adjust as needed for spacing */
   list-style-type: none; /* Remove bullet points */
   position: relative; /* Position for pseudo-elements */
 
@@ -334,4 +339,39 @@ border-bottom: #37EEFB solid 1px;
 .websiteimage img{
   text-wrap: nowrap;
   
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed to control the spacing */
+  background-color: #111111;
+  border-top: 1px solid #37EEFB;
+  padding: 10px 0; /* Add padding to the top and bottom (adjust the value as needed) */
+}
+
+.page-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display the list items as flex items */
+  
+}
+
+.page-nav li {
+  margin: 0 15px; /* Adjust the margin to control the spacing between items */
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-nav a:hover {
+  color: #FAB42A;
+}
+#illustrations-designs{
+  border-bottom: #37EEFB 1px solid;
+  padding-bottom: 1.1em;
+}
+.m-nav{
+  display: none;
 }

@@ -9,45 +9,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/indexstyle.css">
+    <link rel="stylesheet" href="stylesheets/indexstyle.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="stylesheets/mobileindex.css" media="screen and (max-width: 767px)">
+    <script src="scroll.js"></script>
     <script src="returnbutton.js"></script>
 
 </head>
 
 <body>
     <header>
-        <nav class="main-nav">
-            <ul>
 
-                <li class="nav-item"><a href="sample.html">Illustration and Designs</a>
-                    <ul class="sub-nav">
-                        <li><a href="work_pages/workpage_characterdesign.html">Character Design</a></li>
-                        <li><a href="work_pages/workpage_compost.html">Compost Art</a></li>
-                        <li><a href="work_pages/workpage_hatching.html">Hatcing Sketch</a></li>
-                        <li><a href="work_pages/workpage_jax.html">Dog Illustration</a></li>
-                        <li><a href="work_pages/workpage_logo.html">Graphic Logo</a></li>
-                        <li><a href="work_pages/workpage_card.html">Post Card Mockup</a></li>
-                        <li><a href="work_pages/workpage_photoshop.html">Photoshop Work</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="design.html">Websites and Wireframes</a>
-                    <ul class="sub-nav">
-                        <li><a href="https://nickjohnsondesign.github.io/artprompt/">Sketch.Prompt</a> </li>
-                        <li><a href="work_pages/workpage_wireframe.html">Low Fidelity Wireframe</a></li>
-                        <li><a href="work_pages/workpage_wireframe_2.html">High Fidelity Wireframe</a></li>
-                        <!-- Add more sub-menu items as needed -->
-                    </ul>
-                </li>
+        <nav class="page-nav">
+            <ul>
+                <li><a href="#get-to-know-me">Get to Know Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#employment">Employment</a></li>
+                <li><a href="#illustrations-designs">Illustration and Designs</a></li>
+                <li><a href="#websites-wireframes">Websites and Wireframes</a></li>
             </ul>
         </nav>
+        <nav class="m-nav">
+            <ul>
+                <li><a href="#get-to-know-me">Get to Know Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#employment">Employment</a></li>
+                <li><a href="#illustrations-designs">Illustration and Designs</a></li>
+                <li><a href="#websites-wireframes">Websites and Wireframes</a></li>
+            </ul>
+        </nav>
+        
     </header>
     <div class="content-container">
-        <h1>Nicholas Johnson<br>
+        <h1 class="name">Nicholas Johnson Resume<br>
             <img id="me" src="images/me.png" alt="" height="350px" width="350px"></h1>
         <h5>nickjohn2323@gmail.com | 407-714-9903</h5>
     
-        <h2><strong>Get to know me</strong></h2>
+        <h2 id="get-to-know-me"><strong>Get to know me</strong></h2>
     
         <p class="intro">
             Hello, I'm Nicholas Johnson, a Summa Cum Laude graduate with a 4.0 GPA from Seminole State College of Florida. I have a strong passion for design and illustration, and I'm currently expanding my skills in HTML, React, and JavaScript.
@@ -57,21 +58,21 @@
         </p>
     
        
-            <div class="section">
+            <div class="section" id="education">
                 <div class="sectionedu">
-                <h2>Education</h2>
+                <h2>Education and Academics</h2>
                 <ul>
-                    <li><span class="highlight">Associates in Arts</span> - Seminole State College of Florida</li>
-                    <li><span class="highlight">Digital and Interactive Media Design Technical Certificate</span> - Seminole State College of Florida
-                        <ul class="eduul">
-                            <li style="font-size: 1.2em">GPA: 4.0</li>
-                        </ul>
+                    <li><span class="highlight">Associates in Arts</span><br>Seminole State College of Florida  GPA: 4.0</li>
+                    <li><span class="highlight">Digital and Interactive Media Design Technical Certificate</span><br> <span style="text-indent: 5px;">Seminole State College of Florida  GPA: 4.0</span>
                     </li>
-                    <li><span class="highlight">UX Design Professional Certification</span> - Google (Pursuing)</li>
+                    <li><span class="highlight">UX Design Professional Certification</span><br>Google | Coursera (Pursuing)</li>
+                    <li><span class="highlight">Phi Theta Kappa Honors Society</span><br>Member </li>
+                    <li><span class="highlight">First Generation Student Program</span><br>Member </li>
+
                 </ul>
                 </div></div>
 
-            <div class="sectionlists">
+            <div class="sectionlists" id="skills">
             <div class="column-layout">
                 <div class="column">
                     <h2>Skill Set</h2>
@@ -88,7 +89,7 @@
                         <li>Time Management</li>
                     </ul>
                 </div>
-                <div class="column">
+                <div class="column"id="software">
                     <h2>Software</h2>
                     <ul class="software-list">
                         <li>Krita</li>
@@ -109,19 +110,19 @@
         </div>
     </div>
 </div>
-    <div class="section">
+    <div class="section" id="employment">
         <h2>Employment</h2>
         <ul>
             <li>
                 <span class="highlight"><strong>Freelance Illustration and Design</span></strong><br>
-                <p style="line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
                     Engage with clients directly and professionally and deliver design and illustration solutions that fit their needs.<br>
                     Worked and adhered to a self-imposed schedule and delivered solutions to clients on time.
                 </p>
             </li>
             <li>
                 <span class="highlight"><strong>Prepcook/Dishwasher, NYPD Pizza</strong></span><br>
-                <p style="line-height: 1.5; font-size: 1.1em; list-style: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
                     Work through extremely busy nights to provide customers with a satisfactory experience.<br>
                     Engage with teammates to expedite work duties as quickly as possible.<br>
                     Prepare food and ingredients for service.<br>
@@ -130,7 +131,7 @@
             </li>
             <li>
                 <span class="highlight"><strong>Prepcook, 99 Restaurants</strong></span><br>
-                <p style="line-height: 1.5; font-size: 1.1em; list-style-type: none; margin-left: 1.5em;">
+                <p style="line-height: 1.5; font-size: .9em; list-style-type: none; ">
                     Collaborated with the kitchen team to ensure efficient workflow during busy shifts.<br>
                     Maintained a clean and organized kitchen workspace.<br>
                     Assisted in food preparation, ensuring all ingredients were ready for service.
@@ -138,19 +139,20 @@
             </li>
         </ul>
     </div>
-<h3> <a href="sample.html">Illustration and Designs</a></h3>
-<h3 class="thumbnail">
+<h3 id="illustrations-designs"> <a href="sample.html">Illustration and Designs</a></h3>
+<div class="thumbnail">
     <a href="work_pages/workpage_characterdesign.html"><img src="thumbnail/characterprojthumbnail.png" alt=""></a> 
     <a href="work_pages/workpage_compost.html"><img src="thumbnail/compostprojthumbnail.png" alt=""></a>
     <a href="work_pages/workpage_hatching.html"><img src="thumbnail/gutsthumbnail.png" alt=""></a>
     <a href="work_pages/workpage_jax.html"><img src="thumbnail/jaxillustrationthumbnail.png" alt=""></a>
+</div><div class="thumbnail">
     <a href="work_pages/workpage_logo.html"><img src="thumbnail/NJlogothumbnail.png" alt=""></a>
     <a href="work_pages/workpage_card.html"><img src="thumbnail/postcardthumbnail.png" alt=""></a>
     <a href="work_pages/workpage_unity.html"><img src="thumbnail/unityprojthumbnail.png" alt=""></a>
     <a href="work_pages/workpage_photoshop.html"><img src="thumbnail/womanphotoshopthumbnail.png" alt=""></a>
-  </h3>
+</div>
 
-<h3><a href="design.html">Websites and Wireframe</a></h3>
+<h3><a href="design.html" id="websites-wireframes">Websites and Wireframe</a></h3>
 <h3 class="websiteimage">
     <a href="https://nickjohnsondesign.github.io/artprompt/" target="_blank"><img src="images/Prompt.png" alt="" height="225px"></a> 
     <a href="work_pages/workpage_wireframe.html" target="_blank"><img src="images/wireframe2.png" alt="" height="225px"></a>
