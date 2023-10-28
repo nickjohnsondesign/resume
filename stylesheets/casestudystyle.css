@@ -20,24 +20,19 @@
       list-style-type: none;
       
   }
-  .education-list li, .skills-list li, .software-list li, .employment-list li{
+  li{
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
+    color: azure;
   }
-  @media (max-width: 1920px) {
-    body{
-      background-color: #111111; 
-      margin: 0 7.5%; 
-      font-family: sans-serif; 
-    }
-  }
-  @media (min-width: 1921px) {
-    body{
+  
+  body{ 
       background-color: #111111; 
       margin: 0 15%; 
       font-family: sans-serif; 
-    }
-  }
+        background-image: "images/herobackground.png";
+      }
+  
   h1 { 
       text-align: center;
       font-family: 'Archivo', sans-serif;
@@ -68,7 +63,7 @@
     padding-top: 1em;
     font-family: 'Fira Sans Condensed', sans-serif;
     color: #FAB42A; 
-    font-size: 1.5em;
+    font-size: 2em;
           }
       
   p { 
@@ -96,7 +91,7 @@ footer img{
   display: flex;
   flex: 1 1 2em;
   justify-content: center;
-  margin-bottom: 1.5em; 
+  margin-bottom: 1.5em; /* Add margin to separate the two lines of thumbnails */
 }
 
 .thumbnail img {
@@ -133,74 +128,76 @@ h4{
 }
 
 .education-list .education ul {
-  margin-left: 1em; 
-  font-size: 1em;
+  margin-left: 1em; /* Adjust this value as needed */
+  font-size: 1em; /* You can adjust the font size as well */
   
   padding-bottom: 1em;
 }
 
+/* Add specific margin for the coursework list */
 .education-list .education ul .coursework {
-  margin-left: 1em; 
-  font-size: 1em;
+  margin-left: 1em; /* Adjust this value as needed */
+  font-size: 1em; /* You can adjust the font size as well */
 
   padding-left: 2em;
 }
 .intro {
   border-bottom: 1px solid #37EEFB;
-  padding-bottom: 2em; 
+  padding-bottom: 2em; /* Adjust this value to control the space between content and the border */
   padding-left: 2.5em;
   padding-right: 2.5em;
-  line-height: 1.65; 
-  text-align: justify; 
-  text-justify: inter-word; 
+  line-height: 1.65; /* Adjust the line height to improve readability */
+  text-align: justify; /* Justify text to prevent long string of lines at the end */
+  text-justify: inter-word; /* Specify that only spaces should be adjusted for justification */
   font-size: 1.65em;
 }
 .back-link {
-  margin-right: 3em; 
-  padding: 50px;
+  margin-right: 3em; /* Adjust this value to control the space between the links */padding: 50px;
 }
 .about-me-container {
   display: flex;
   align-items: center;
 }
 .sectionedu {
-  border-bottom: 1px solid #37EEFB; 
+  border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
 padding-bottom: 1em;
 }
 .sectionlists {
-  border-bottom: 1px solid #37EEFB;
+  border-bottom: 1px solid #37EEFB; /* Add a bottom border to separate sections */
 padding-bottom: 1em;
 }
 .section p {
   text-indent: 0;
-  line-height: 1.5; 
-  font-size: 1.1em;
-  list-style: none; 
-  margin-left: 0; 
+  line-height: 1.5; /* Optionally, adjust line height as needed */
+  font-size: 1.1em; /* Optionally, adjust font size as needed */
+  list-style: none; /* Remove bullet points */
+  margin-left: 0; /* Remove margin */
 }
-
+/* Style the two-column layout */
 .column-layout {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1em; 
+  margin-top: 1em; /* Add margin for spacing */
   text-align: left;
 }
 
 .column {
-  flex-basis: calc(50% - 10px); 
+  flex-basis: calc(50% - 10px); /* Adjust the width of columns and add spacing */
   
 }
 
 .skills-list, .software-list {
-  list-style-type: none; 
-  font-size: 1.2em; 
-  margin-left: 0; 
-  padding-left: 0; 
+  list-style-type: none; /* Remove bullet points */
+  font-size: 1.2em; /* Optionally, adjust the font size as needed */
+  margin-left: 0; /* Remove margin */
+  padding-left: 0; /* Remove left padding */
 
   }
 
-
+/* Additional styling as needed */
+/* Style the "Scroll to Top" button */
+/* Style the "Scroll to Top" button */
 .scrollToTopBtn {
   position: fixed;
   bottom: 1.5em;
@@ -211,8 +208,8 @@ padding-bottom: 1em;
   padding: .5em 1em;
   border-radius: .25em;
   cursor: pointer;
-  opacity: 0.5; 
-  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.5; /* Set initial opacity to 0.5 */
+  transition: opacity 0.3s, transform 0.3s; /* Add a transition for both opacity and transform */
   width: 5em;
   height: 5em;
   border-radius: 50%;
@@ -224,10 +221,10 @@ padding-bottom: 1em;
   display: none;
 }
 
-
+/* Grow the button on hover */
 .scrollToTopBtn:hover {
-  opacity: 1;
-  transform: scale(1.2);
+  opacity: 1; /* Set opacity to 1 on hover */
+  transform: scale(1.2); /* Grow the button by 20% when hovered */
 }
 @keyframes fadeIn {
   from {
@@ -240,23 +237,23 @@ padding-bottom: 1em;
   }
 }
 
+/* Show the button when you scroll down */
 .show-button {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Optionally, add a scaling effect */
 }
 header {
   margin-left: 1em;
   background-color: #111111;
   border-bottom: 1px solid #37EEFB;
-  padding-top: 20px; 
+  padding-top: 20px; /* Add padding to the top (adjust the value as needed) */
 }
 
 .main-nav {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  font-size: 2em;
 }
 
 .main-nav ul {
@@ -280,17 +277,17 @@ header {
 
 .sub-nav {
   display: none;
-  position: absolute;
+  position: absolute; /* Position the sub-navigation absolutely */
   background-color: #111111;
   z-index: 1;
-  top: 100%; 
-  left: 0;
+  top: 100%; /* Position it below the parent element */
+  left: 0; /* Align it with the left edge of the parent element */
   font-size: .75em;
 }
 
 .main-nav ul li {
   display: inline;
-  position: relative;
+  position: relative; /* Position the parent relative to allow absolute positioning for the sub-navigation */
 }
 
 .sub-nav li {
@@ -301,11 +298,11 @@ header {
 .sub-nav li a {
   color: #fff;
   text-decoration: none;
-  display: block; 
+  display: block; /* Display each item on a new line */
 }
 .main-nav ul li:hover, .main-nav ul li a:hover {
   color: #FAB42A;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
 }
 .centered-text {
   display: flex;
@@ -313,31 +310,31 @@ header {
   justify-content: center;
 }
 .nav-item {
-  flex: 1; 
-  text-align: center; 
-  padding: .5em; 
-  list-style-type: none;
-  position: relative; 
+  flex: 1; /* Equal distribution of space among items */
+  text-align: center; /* Center-align the text within each item */
+  padding: .5em; /* Adjust as needed for spacing */
+  list-style-type: none; /* Remove bullet points */
+  position: relative; /* Position for pseudo-elements */
 
-
+  /* Customize the glow color and other text styles */
   font-weight: bold;
 
-
-  transition: text-shadow 0.3s;
+  /* Glowing effect animation */
+  transition: text-shadow 0.3s; /* Add a smooth transition effect */
 }
 .nav-item:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adjust the glow color and size as needed */
 }
-
+/* Define the glowing animation */
 @keyframes glowing {
   0% {
-    color: #57b1dc;
+    color: #57b1dc; /* Initial text color */
   }
   50% {
-    color: #FAB42A;
+    color: #FAB42A; /* Glowing text color */
   }
   100% {
-    color: #57b1dc;
+    color: #57b1dc; /* Return to the initial text color */
   }
 }
 .websiteimage img{
@@ -347,38 +344,23 @@ header {
 
 .page-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Adjust as needed to control the spacing */
   background-color: #111111;
   border-top: 1px solid #37EEFB;
-  padding: 10px 0; 
+  padding: 10px 0; /* Add padding to the top and bottom (adjust the value as needed) */
 }
 
 .page-nav ul {
   list-style: none;
   padding: 0;
-  display: flex; 
+  display: flex; /* Display the list items as flex items */
   
 }
-@media (min-width: 1921px) {
-  .page-nav li {
-    margin: 0 15px;
-    font-size: 1.5em;
-  }
-  }
 
+.page-nav li {
+  margin: 0 15px; /* Adjust the margin to control the spacing between items */
+}
 
-@media (max-width: 1919px) {
-  .page-nav li {
-    margin: 0 15px;
-    font-size: 1em;
-  }
-}
-@media (min-width: 1920px) {
-  .page-nav li {
-    margin: 0 15px;
-    font-size: 1.35em;
-  }
-}
 .page-nav a {
   text-decoration: none;
   color: #fff;
