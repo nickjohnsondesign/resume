@@ -201,8 +201,12 @@ h3.hf {
 }
 .hfwf {
     padding-bottom: 20px;
+    overflow: visible;
 }
-
+.wireframe-content {
+  z-index: 2; /* Set a higher z-index value for the text content */
+  position: relative; /* or absolute, if necessary */
+}
 .wireframe-content img {
 
     width: 200%;
@@ -454,16 +458,28 @@ footer a:last-child {
     color: #FAB42A;
   }
   .slides-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (change this for other ratios) */
-    height: 0;
-    overflow: hidden;
-}
 
-.slides-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    align-items: center; /* Center-align content vertically */
+    margin: 0;
+}
+@media (max-width:425px) {
+  .slides-container iframe{
+    flex: 1;
+    max-width: 100%;
+    width: 675px;
+    height: 260px;
+
+    background-color: black;
+  }
+}
+@media (min-width:768px) {
+  .slides-container iframe{
+    flex: 1;
+    max-width: 100%;
+    width: 675px;
+    height: 415px;
+    padding-left: 4.5px;
+    padding-right: 4.5px;
+    background-color: black;
+  }
 }
