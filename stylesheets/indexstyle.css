@@ -49,7 +49,7 @@
   h5 {
   
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      padding-bottom: 1.5em;
+      
       text-align: center;
       color: azure;
       font-size: 1em;
@@ -250,6 +250,7 @@ header {
   background-color: #111111;
   border-bottom: 1px solid #37EEFB;
   padding-top: 20px; 
+  
 }
 
 .main-nav {
@@ -393,4 +394,79 @@ header {
 }
 .m-nav{
   display: none;
+}
+.name-and-contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow flex items to wrap when there's not enough space */
+  padding-top: 20px;
+}
+
+.logo {
+  flex: 0 0 auto; /* The logo will not grow or shrink */
+  margin-right: 1em; /* Add some spacing between the logo and name */
+}
+
+.name-container {
+  flex: 1; /* The name container will take up remaining space */
+}
+
+#me {
+  max-width: 100%;
+}
+
+.name {
+  font-size: 4.5em;
+}
+
+/* Styles for smaller screens (e.g., screens with a maximum width of 768px) */
+
+
+/* Styles for larger screens (e.g., screens with a minimum width of 1920px) */
+@media (min-width: 1024px) {
+  .name {
+    font-size: 2.5em; /* Adjust the name font size for larger screens */
+  }
+  .logo{
+    height: 250px;
+    width: 250px;
+  }
+}
+@media (min-width: 1440px) {
+
+  .name {
+    font-size: 3.5em; /* Adjust the name font size for larger screens */
+  }
+  .logo{
+    height: 350px;
+    width: 350px;
+    padding-bottom: 20px;
+  }
+}@media (min-width: 2560px) {
+
+  .name {
+    font-size: 5em; /* Adjust the name font size for larger screens */
+  }
+  .logo{
+    height: 350px;
+    width: 350px;
+    padding-bottom: 20px;
+  }
+}
+.section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.section-header {
+  flex: 1;
+  width: 50%;
+  text-align: left;
+}
+.section-content {
+  flex: 1;
+  width: 50%;
+  text-align: justify;
 }

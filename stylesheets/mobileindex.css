@@ -338,3 +338,87 @@
   #education {
     padding-left: 10px;
   }
+  @media (max-width: 768px) {
+    /* Add your logo styling here for smaller screens */
+    .logo {
+      height: 200px !important;
+      width: 200px !important;
+      margin: 0 auto; /* Center the logo horizontally */
+      display: block; /* Ensure the logo is a block-level element */
+
+    }
+    .logo {
+      margin-right: 10px; /* Adjust this value to control the space between the logo and the name */
+      margin-left: 30px;
+  }
+  
+  .name-container {
+      flex: 1; /* This ensures the name and contact information take up the remaining space */
+  }
+  
+  .name {
+      font-size: 1.5em;
+  }
+  
+  .contact {
+      font-size: 1em;
+  }
+  }
+  @media (max-width: 425px) {
+    /* Add your logo styling here for smaller screens */
+    .logo {
+      height: 150px !important;
+      width: 150px !important;
+      margin: 0 auto; /* Center the logo horizontally */
+      display: block; /* Ensure the logo is a block-level element */
+
+    }
+    .logo {
+      margin-right: 10px; /* Adjust this value to control the space between the logo and the name */
+      margin-left: 10px;
+  }
+  
+  .name-container {
+      flex: 1; /* This ensures the name and contact information take up the remaining space */
+  }
+  
+  .name {
+      font-size: 1.5em;
+  }
+  
+  .contact {
+      font-size: 1em;
+  }
+  }
+  @media (max-width: 375px) {
+    /* Add your logo styling here for smaller screens */
+    .logo {
+      height: 120px !important;
+      width: 120px !important;
+      margin: 0 auto; /* Center the logo horizontally */
+      display: block; /* Ensure the logo is a block-level element */
+
+    }
+    .logo {
+
+
+  }
+  
+  .name-container {
+      flex: 1; /* This ensures the name and contact information take up the remaining space */
+  }
+  
+  .name {
+      font-size: 1.15em;
+  }
+  
+  .contact {
+      font-size: .75em;
+  }
+  }
+  .name-and-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow flex items to wrap when there's not enough space */
+    padding-top: 20px; /* Adjust this value to reduce the space */
+}
