@@ -422,3 +422,8 @@
     flex-wrap: wrap; /* Allow flex items to wrap when there's not enough space */
     padding-top: 20px; /* Adjust this value to reduce the space */
 }
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

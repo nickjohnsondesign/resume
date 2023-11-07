@@ -490,3 +490,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #FAB42A; /* Change the thumb color on hover (light blue) */
 }
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

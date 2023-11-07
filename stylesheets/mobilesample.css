@@ -31,15 +31,31 @@ a:link
       padding-top: 5px;
 
       color:#FAB42A;
-      border-bottom: 1px solid #37EEFB;
+
       } 
-          .column {
-            vertical-align: middle;
-            flex: 25%;
-            max-width: 45%;
-            padding: 0 25px;
-            text-align: center;
-          }
+      @media (max-width: 600px) {
+        .column {
+          vertical-align: middle;
+          flex: 25%;
+          max-width: 45%;
+          padding: 0 25px;
+          text-align: center;
+
+        
+        }
+      }
+      @media (min-width: 601px) {
+        .column {
+          vertical-align: middle;
+          flex: 25%;
+          max-width: 65%;
+          padding: 0 25px;
+          text-align: center;
+          margin-left: 8.5em;
+        
+        }
+      }
+ 
           .row{
             display: flex;
             flex-wrap: wrap;
@@ -64,7 +80,7 @@ a:link
   h2{
     color:aliceblue;
     text-align: center;
-    border-bottom: 1px solid #37EEFB;
+    
     padding-bottom: 25px;
   }
 @media screen and (max-width: 800px) {
@@ -150,7 +166,7 @@ a:link
     header {
     margin-left: 20px;
     background-color: #111111;
-    border-bottom: #37EEFB solid 1px;
+
     }
     
     .main-nav {
@@ -242,4 +258,15 @@ a:link
     }
     .thumbnail{
         display:none;
+    }
+    .centered-images {
+      display: flex;
+      flex-direction: column; /* Display images in a single column */
+      align-items: center; /* Center-align images horizontally */
+      padding: 10px; /* Add spacing as needed */
+    }
+    
+    /* Center-align individual images within the column */
+    .centered-images a {
+      text-align: center;
     }
