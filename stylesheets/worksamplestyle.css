@@ -64,7 +64,7 @@ a:link
   h2{
     color:aliceblue;
     text-align: center;
-    border-bottom: 1px solid #37EEFB;
+
     padding-bottom: 25px;
   }
 @media screen and (max-width: 800px) {
@@ -96,7 +96,6 @@ a:link
       bottom: 20px; /* Adjust the distance from the bottom as needed */
       right: 20px; /* Adjust the distance from the right as needed */
       z-index: 1000; /* Ensure the button is above other content */
-    
       color: #fff; /* White text color */
       border: none;
       padding: 10px 20px;
@@ -308,3 +307,35 @@ a:link
       opacity: 1;
       transform: translateY(0); /* Optionally, add a scaling effect */
     }
+    .thumbnail-container {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent wrapping */
+      border-bottom: 1px solid #37EEFB;
+      justify-content: space-between; /* Add space between thumbnails */
+      margin: 0 auto; /* Center the container */
+      padding-right: 10px; /* Add space between the scrollbar and the border */
+    }
+    
+    .thumbnail-container a {
+      display: inline-block; /* Display the thumbnails as inline-block elements */
+    }
+    
+    .thumbnail-container::-webkit-scrollbar {
+      width: 12px; /* Set the width of the scrollbar */
+    }
+    
+    .thumbnail-container::-webkit-scrollbar-track {
+      background: #1a1a1a; /* Set the background color of the scrollbar track */
+    }
+    
+    .thumbnail-container::-webkit-scrollbar-thumb {
+      background: #a97817; /* Change the thumb color on hover (light blue) */
+      border-radius: 6px; /* Round the corners of the thumb */
+      transition: background 0.3s; /* Add a transition for the background color */
+    }
+    
+    .thumbnail-container::-webkit-scrollbar-thumb:hover {
+      background: #FAB42A; /* Change the thumb color on hover (light blue) */
+      transition: background 0.3s; /* Add a transition for the hover effect */
+    }
+    

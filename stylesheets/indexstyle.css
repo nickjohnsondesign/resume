@@ -148,7 +148,7 @@ h4{
 .intro {
   border-bottom: 1px solid #37EEFB;
   padding-bottom: 2em; 
-  padding-left: 2.5em;
+  padding-left: 1.65em;
   padding-right: 2.5em;
   line-height: 1.65; 
   text-align: justify; 
@@ -469,4 +469,24 @@ header {
   flex: 1;
   width: 50%;
   text-align: justify;
+}
+.skills-list, .software-list{
+  padding-left: 1.65em;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Set the background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #FAB42A; /* Set the color of the scrollbar thumb (dark blue) */
+  border-radius: 6px; /* Round the corners of the thumb */
+  transition: background 0.3s; /* Add a transition for the background color */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #FAB42A; /* Change the thumb color on hover (light blue) */
 }

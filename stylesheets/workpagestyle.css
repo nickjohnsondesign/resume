@@ -101,4 +101,21 @@ a:link {
                 opacity: 1;
                 transform: translateY(0); /* Optionally, add a scaling effect */
               }
+              body::-webkit-scrollbar {
+                width: 12px; /* Set the width of the scrollbar */
+              }
+              
+              body::-webkit-scrollbar-track {
+                background: #1a1a1a; /* Set the background color of the scrollbar track */
+              }
+              
+              body::-webkit-scrollbar-thumb {
+                background: #FAB42A; /* Set the color of the scrollbar thumb (dark blue) */
+                border-radius: 6px; /* Round the corners of the thumb */
+                transition: background 0.3s; /* Add a transition for the background color */
+              }
+              
+              body::-webkit-scrollbar-thumb:hover {
+                background: #FAB42A; /* Change the thumb color on hover (light blue) */
+              }
     
