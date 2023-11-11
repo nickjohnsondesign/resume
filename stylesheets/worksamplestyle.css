@@ -64,8 +64,12 @@ a:link
   h2{
     color:aliceblue;
     text-align: center;
-
+ 
     padding-bottom: 25px;
+  }
+  h2 img{
+  
+    height: 200px;
   }
 @media screen and (max-width: 800px) {
   .column {
