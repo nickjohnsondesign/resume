@@ -23,6 +23,7 @@
   .education-list li, .skills-list li, .software-list li, .employment-list li{
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
+    
   }
   @media (max-width: 1920px) {
     body{
@@ -495,6 +496,12 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
 }
-.thumbnail img{
-
+.employmentsection{
+  border-bottom: #37EEFB 1px solid;
+  padding-bottom: 15px;
+}
+.project-list li{
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  
 }
