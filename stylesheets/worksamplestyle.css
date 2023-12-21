@@ -339,3 +339,11 @@ a:link
       background: #FAB42A; 
       transition: background 0.3s; 
     }
+    .smaller-knight{
+      height: 1000px;
+      width: 500px;
+      max-width: 500px;
+      height: auto; 
+    }
+    
+  
