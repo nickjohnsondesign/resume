@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap');
 a:link 
 {
-    color: #57b1dc;
+    color: #c5fdfd;
     background-color: transparent;
     text-decoration: underline;
   }
   a:visited 
   {
-    color: #1089c2;
+    color: #1089c2 ;
     background-color: transparent;
     text-decoration: underline;
   }

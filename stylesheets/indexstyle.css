@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Roboto:wght@300&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Zen+Maru+Gothic&family=Zilla+Slab:wght@300;400&display=swap'); 
   a:link {
-    color: #57b1dc;
+    color: #c5fdfd;
     background-color: transparent;
     text-decoration: underline;
   }
@@ -148,7 +148,7 @@ h4{
 }
 .intro {
   border-bottom: 1px solid #37EEFB;
-  padding-bottom: 2em; 
+  padding-bottom: 1.3em; 
   padding-left: 1.65em;
   padding-right: 2.5em;
   line-height: 1.65; 
@@ -400,7 +400,7 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap; /* Allow flex items to wrap when there's not enough space */
-  padding-top: 20px;
+  padding-top: 2em;
 }
 
 .logo {
@@ -503,5 +503,5 @@ body::-webkit-scrollbar-thumb:hover {
 .project-list li{
   font-size: 1.5em;
   font-family: 'Roboto', sans-serif;
-  
+  padding-bottom: .1em
 }
