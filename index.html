@@ -9,16 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/indexstyle.css" media="screen and (min-width: 769px)">
-    <link rel="stylesheet" href="stylesheets/mobileindex.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="stylesheets/indexstyle.css">
     <script src="scroll.js"></script>
     <script src="returnbutton.js"></script>
-
+    <script src="toggle.js"></script>
+    <script src="theme-toggle.js"></script>
 </head>
-
-<body>
+<body class="light-mode">
     <header>
-
         <nav class="page-nav">
             <ul>
                 <li><a href="#get-to-know-me">Get to Know Me</a></li>
@@ -41,26 +39,67 @@
                 <li><a href="#websites-wireframes">Design / Case Studies</a></li>
             </ul>
         </nav>
-        
-    </header>
-    <div class="content-container">
-        <div class="name-and-contact">
-            <div class="logo">
-                <img class="logo" src="images/logo.png" alt="">
-            </div>
-            <div class="name-container">
-                <h1 class="name">Nicholas Johnson</h1>
-                <h5 class="contact">nickjohn2323@gmail.com | 407-714-9903</h5>
-            </div>
+        <div class="theme-toggle">
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        <script>
+         const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
+  } else {
+    body.classList.add('light-mode');
+    body.classList.remove('dark-mode');
+  }
+});
+window.addEventListener('DOMContentLoaded', (event) => {
+  const darkModeToggle = document.querySelector('.switch input');
+  const body = document.body;
+
+  if (body.classList.contains('dark-mode')) {
+    darkModeToggle.checked = true;
+  }
+
+  darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+      body.classList.remove('light-mode');
+    } else {
+      body.classList.add('light-mode');
+      body.classList.remove('dark-mode');
+    }
+  });
+});
+          
+            themeToggleBtn.addEventListener('click', toggleTheme);
+          </script>
+
+    </header>
+    <div class="content-container"> 
+        <div class="name-and-contact">
+          <div class="logo">
+            <img src="images/logodm.png" alt="Dark Mode Logo" class="dark-logo">
+            <img src="images/logolm.png" alt="Light Mode Logo" class="light-logo">
+          </div>
+          <div class="name-container">
+            <h1 class="name">Nicholas Johnson</h1>
+            <h5 class="contact">nickjohn2323@gmail.com | 407-714-9903 | Altamonte Springs, FL</h5>
+          </div>
         </div>
+      </div>
     
         <h2 id="get-to-know-me"><strong>Get to know me</strong></h2>
     
         <p class="intro">
-            Hello, I'm Nicholas Johnson, a Summa Cum Laude graduate with a 4.0 GPA from Seminole State College of Florida. I have a strong passion for design and illustration, and I'm currently expanding my skills in HTML, React, and JavaScript.
-
-            I'm a self-motivated, ambitious individual who thrives on challenges. My professional aspirations revolve around creative development in UX design, as well as graphic design, video editing, and illustration. I've had the privilege of working on diverse freelance projects, from designing websites and logos to crafting eye-catching web banners.
+            Hi, I’m Nicholas Johnson, and I am a 4.0 Summa Cum Laude graduate from Seminole State College of Florida and have certifcations in UX Design, Digital Media Design, and Digital Marketing and E-Commerce. My expertise includes projects such as logo design, 
+            wireframing websites, creating a prompt generator, and developing my resume website using HTML, CSS, and JavaScript. I’m eager to apply my technical and creative skills in a role that 
+            challenges me and allows me to innovate. 
     
         </p>
     
@@ -69,13 +108,16 @@
                 <div class="sectionedu">
                 <h2>Education and Academics</h2>
                 <ul class="education-list">
-                    <li><span class="highlight">Associates in Arts // 2023</span><br>Seminole State College of Florida  GPA: 4.0</li>
-                    <li><span class="highlight">Digital and Interactive Media Design Technical Certificate // 2023</span><br> <span style="text-indent: 5px;">Seminole State College of Florida  GPA: 4.0</span>
+                    <li><span class="highlight">Associate in Arts in Digital Media Design // 2021-2023</span><br>Seminole State College of Florida  GPA: 4.0</li>
+                    <li><span class="highlight">Digital and Interactive Media Design Technical Certificate // 2021-2023</span><br> <span style="text-indent: 5px;">Seminole State College of Florida  GPA: 4.0</span>
                     </li>
-                    <li><span class="highlight">Google UX Design Professional Certification // 2023</span><br>Google | Coursera</li>
-                    <li><span class="highlight">Phi Theta Kappa Honors Society</span><br>Member </li>
-                    <li><span class="highlight">First Generation Student Program</span><br>Member </li>
+                    <li><span class="highlight">Phi Theta Kappa Honors Society // 2021-2023</span><br>Member </li>
+                    <li><span class="highlight">First Generation Student Program // 2021-2023</span><br>Member </li>
+                    <li><span class="highlight">Google UX Design Certification // 2023</span><br>Google | Coursera</li>
+                    <li><span class="highlight">Google Digital Marketing and E-Commerce Specialization Certification // 2024</span><br>Google | Coursera</li>
+                    <li><span class="highlight">Google Project Management Certification (Pursuing) // 2024</span><br>Google | Coursera</li>
 
+ 
                 </ul>
                 </div></div>
 
@@ -84,116 +126,97 @@
                 <div class="column">
                     <h2>Skill Set</h2>
                     <ul class="skills-list">
-                        <li>Wireframing</li>
-                        <li>Design</li>
-                        <li>Illustration</li>
-                        <li>Video/Image Editing</li>
-                        <li>Prototyping</li>
+                        <span class="highlight2 technical-skill"><strong>Technical Skills</strong></span>
+                        <li>Wireframing | Prototyping</li>
+                        <li>Social Media | Email Marketing</li>
+                        <li>Video | Image Editing</li>
+                        <li>UI/UX Design</li>
                         <li>HTML</li>
                         <li>CSS</li>
-                        <li>Strong General Computers/Technology skills</li>
-                        <li>Public Speaking</li>
+                        <span class="highlight2 technical-skill"><strong>Soft Skills</strong></span>
+                        <li>Strong General Computer/Technology skills</li>
+                        <li>Communication</li>
                         <li>Problem Solving</li>
                         <li>Time Management</li>
+                        <li>Organization</li>
                     </ul>
                 </div>
-                <div class="column"id="software">
+                <div class="column" id="software">
                     <h2>Software</h2>
                     <ul class="software-list">
                         <li>Figma</li>
-                        <li>Photoshop</li>
                         <li>Illustrator</li>
                         <li>Premiere</li>
+                        <li>Photoshop</li>                       
                         <li>Krita</li>
-                        <li>GIMP</li>                        
-                        <li>InDesign</li>
-                        <li>Lightroom</li>
                         <li>Excel</li>
-                        <li>PowerPoint</li>
                         <li>Word</li>
                         <li>Visual Studio</li>
+                        <li>PowerPoint</li>
+                        <li>GIMP</li>                        
+                        <li>InDesign</li>                     
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
-    <div class="employmentsection">
+
+<div class="employmentsection">
     <div class="section" id="employment">
         <h2>Experience | Employment</h2>
         <ul class="employment-list">
             <li>
-                <span class="highlight"><strong>Current | Maintenance Specialist, YouFit Gyms</span></strong><br>
-                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
-                    Currently, I'm working part time doing maintenance at my local gym while searching for<br> 
-                    employment opportunities that align with my education and background. 
-                </p>
+                <span class="highlight3"><strong>Maintenance Specialist, YouFit Gyms | January 2024 - Current</strong></span><br>
+                <ul style="list-style-type: disc;" class="hlpoints">
+                    <li>Responsible for $1200 monthly supply budget and placing order to maintain stock and inventory once a month</li>
+                    <li>Resolved 5-10 maintenance tasks daily, ensuring a clean and efficient facility operation </li>
+                    <li>Ensured a clean, safe, and well-maintained facility that sees 100s of costumers every day</li>
+                </ul>
             </li>
             <li>
-                <span class="highlight"><strong>Sketch.Prompt - Web Design and Development</span></strong><br>
-                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
-                    Sketch.Prompt is a React/JS-based prompt generator which I developed that provides artists<br>
-                    and designers with daily creative inspiration. It generates a unique type/font/color with<br>
-                    each refresh along with a new prompt that is generated every day.
-                </p>
+                <span class="highlight3"><strong>Sketch.Prompt - Web Design and Development</strong></span><br>
+                <ul style="list-style-type: disc;">
+                    <li>Developed a web application that delivers a prompt from a generated list every 24 hours for artists to practice with </li>
+                    <li>Implemented a luminance algorithm that chooses between low relative luminance (0-0.6) and high relative luminance (0.7-1)<br> based on dark or light mode to optimize contrast and readability</li>
+                    <li>Built with React in JavaScript and CSS and developed with highly variable and generated visual impact to keep user interest</li>
+                    <li>Dynamically presents unique user experiences through generated visual changes each visit </li>
+
+                </ul>
             </li>
             <li>
-                <span class="highlight"><strong>Freelance Illustration and Design</span></strong><br>
-                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
-                    Engage with clients directly and professionally and deliver design and illustration solutions<br> that fit their needs.
-                    Worked and adhered to a self-imposed schedule and delivered solutions to <br>clients on time.
-                </p>
+                <span class="highlight3"><strong>Freelance Illustration and Design</strong></span><br>
+                <ul style="list-style-type: disc;">
+                    <li>Engage with clients directly and professionally and deliver design and illustration solutions that fit their needs.</li>
+                    <li>Worked and adhered to a self-imposed schedule and delivered solutions to clients on time.</li>
+                </ul>
             </li>
             <li>
-                <span class="highlight"><strong>Prepcook/Dishwasher, NYPD Pizza // 2020-2021</strong></span><br>
-                <p style="line-height: 1.5; font-size: .9em; list-style: none; ">
-                    Work through extremely busy nights to provide customers with a satisfactory experience.<br>
-                    Engage with teammates to expedite work duties as quickly as possible.<br>
-                    Prepare food and ingredients for service.<br>
-                    Maintain a clean and sanitary work/dining environment.
-                </p>
+                <span class="highlight3"><strong>Prepcook/Dishwasher, NYPD Pizza // 2020-2021</strong></span><br>
+                <ul style="list-style-type: disc;">
+                    <li>Work through extremely busy nights to provide customers with a satisfactory experience.</li>
+                    <li>Engage with teammates to expedite work duties as quickly as possible.</li>
+                    <li>Prepare food and ingredients for service.</li>
+                    <li>Maintain a clean and sanitary work/dining environment.</li>
+                </ul>
             </li>
             <li>
-                <span class="highlight"><strong>Prepcook, 99 Restaurants // 2018-2019</strong></span><br>
-                <p style="line-height: 1.5; font-size: .9em; list-style-type: none; ">
-                    Collaborated with the kitchen team to ensure efficient workflow during busy shifts.<br>
-                    Maintained a clean and organized kitchen workspace.<br>
-                    Assisted in food preparation, ensuring all ingredients were ready for service.
-                </p>
+                <span class="highlight3"><strong>Prepcook, 99 Restaurants // 2018-2019</strong></span><br>
+                <ul style="list-style-type: disc;">
+                    <li>Collaborated with the kitchen team to ensure efficient workflow during busy shifts.</li>
+                    <li>Maintained a clean and organized kitchen workspace.</li>
+                    <li>Assisted in food preparation, ensuring all ingredients were ready for service.</li>
+                </ul>
             </li>
         </ul>
     </div>
 </div>
-    <div class="section" id="project">
-        <h2>Current Projects</h2>
-        <ul class="project-list">
-            <li><span class="highlight"><strong>Video Game - Design Artist</span></strong><br>
-            <p style="line-height: 1.5; font-size: .9em; list-style: none; ">Currently I am working with two of my friends on a rogue-like indie video game. My part in the team is creating all manner of assets from
-            tile sets to armor, and giving input on overall choices for the game. Later in development, I hope to learn a bit of Unity and coding to help out with development.</p></li>
 
-    </div>
-<h3 id="illustrations-designs"> <a href="sample.html">Illustration / Images / Logos</a></h3>
-<div class="thumbnail">
-    <a href="work_pages/workpage_characterdesign.html"><img src="thumbnail/characterprojthumbnail.png" alt=""></a> 
-    <a href="work_pages/workpage_compost.html"><img src="thumbnail/compostprojthumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_hatching.html"><img src="thumbnail/gutsthumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_jax.html"><img src="thumbnail/jaxillustrationthumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_fbw.html"><img src="thumbnail/FBWTHBN-01.png" alt=""></a>
-    <a href="work_pages/workpage_mockup2.html"><img id="mockupthumb" src="thumbnail/mockupthbn.png" alt=""></a>
-</div><div class="thumbnail">
-    <a href="work_pages/workpage_logo.html"><img src="thumbnail/NJlogothumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_card.html"><img src="thumbnail/postcardthumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_torch.html"><img src="thumbnail/torch-thumb.gif" alt=""></a>
-    <a href="work_pages/workpage_photoshop.html"><img src="thumbnail/womanphotoshopthumbnail.png" alt=""></a>
-    <a href="work_pages/workpage_character_design.html"><img src="thumbnail/CDTHBN-01.png" alt=""></a>
-    <a href="work_pages/workpage_geoeye.html"><img src="thumbnail/edthbn-01.png" alt=""></a>
-</div>
 
-<h3><a href="design.html" id="websites-wireframes">Websites / Designs / Case Studies / Projects </a></h3>
+<h3><a href="design.html" id="websites-wireframes"> Portfolio </a></h3>
 <h3 class="websiteimage">
-    <a href="https://nickjohnsondesign.github.io/artprompt/" target="_blank"><img src="images/Prompt.png" alt="" height="225px"></a> 
-    <a href="work_pages/workpage_wireframe.html" target="_blank"><img src="images/wireframe2.png" alt="" height="225px"></a>
-    <a href="work_pages/workpage_wireframe_2.html" target="_blank"><img src="images/1.png" alt="" height="225px"></a>  
+    <a href="design.html" target="_blank"><img src="images/Prompt.png" alt="" height="225 px"></a> 
+    <a href="design.html" target="_blank"><img src="images/Portpreview.png" alt="" height="225 px"></a>
+    <a href="design.html" target="_blank"><img src="images/1.png" alt="" height="225 px"></a>  
 </h3>
 
 <h3>My Social Media</h3>

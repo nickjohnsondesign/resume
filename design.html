@@ -6,13 +6,13 @@
     <meta name="keywords" content="resume, design, art">
     <meta name="author" content="Nicholas Johnson">
     <title>Web Design and Wireframes</title>
-
-    <link rel="stylesheet" href="stylesheets/webdesignstyle.css" media="screen and (min-width: 769px)">
-    <link rel="stylesheet" href="stylesheets/mobiledesign.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="stylesheets/webdesignstyle.css">
     <script src="scroll.js"></script>
     <script src="returnbutton.js"></script>
+    <script src="toggle.js"></script>
+    <script src="theme-toggle.js"></script>
 </head>
-<body>
+<body class="light-mode">
     <header>
         <nav class="page-nav">
             <ul>
@@ -34,15 +34,67 @@
             
             </ul>
         </nav>
+        <div class="theme-toggle">
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        <script>
+         const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
+  } else {
+    body.classList.add('light-mode');
+    body.classList.remove('dark-mode');
+  }
+});
+window.addEventListener('DOMContentLoaded', (event) => {
+  const darkModeToggle = document.querySelector('.switch input');
+  const body = document.body;
+
+  if (body.classList.contains('dark-mode')) {
+    darkModeToggle.checked = true;
+  }
+
+  darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+      body.classList.remove('light-mode');
+    } else {
+      body.classList.add('light-mode');
+      body.classList.remove('dark-mode');
+    }
+  });
+});
+          
+            themeToggleBtn.addEventListener('click', toggleTheme);
+          </script>
     </header>
     
     <h1>Designs / Case Studies / Projects</h1>
 
-    <div class="hfwf" id="sketch.prompt">
-        <h3 style="border: 0px solid"><a href="https://nickjohnsondesign.github.io/artprompt/">Sketch.Prompt</a> - React/JS based prompt generator</h3>
+    <div class="hfwf" id="portfolio">
+        <h3 style="border: 0px solid"><a href="sample.html">My Art</a> - Illustrations, animations, graphics </h3>
+        <div class="wireframe-content">
+            <a href="sample.html" target="_blank">
+                <img src="images/Portpreview.png" alt="Protfolio Preview">
+            </a>
+            <p>
+                A collection of personal projects, freelance work, and school work.
+            </p>
+        </div>
+    </div>
+    
+    <div class="hfwf">
+        <h3 class="h3sp"><a href="https://nickjohnsondesign.github.io/artprompt/">Sketch.Prompt</a> - React/JS based prompt generator</h3>
         <div class="wireframe-content">
             <a href="https://nickjohnsondesign.github.io/artprompt/" target="_blank">
-                <img id="wf2" src="images/Prompt.png" alt="Low Fidelity Wireframe">
+                <img src="images/Prompt.png" alt="Sketch prompt webside preview">
             </a>
             <p>
                 Sketch.Prompt is a React/JS-based prompt generator which I thought of and created myself that provides artists and designers with daily creative inspiration. It generates a unique type/font/color with each refresh and a new prompt is generated every day.  
@@ -50,13 +102,11 @@
         </div>
     </div>
 
-
-    
-    <div class="hfwf" id="lofi">
+    <div class="hfwf">
         <h3><a href="https://www.figma.com/file/dY8mfhdevrFzYAr4uzM9Et/Movie-Theatre-Seat-Reservation-App-Wireframe?type=design&node-id=0%3A1&mode=design&t=XCUlokqvzAu33fIE-1" target="_blank">Low Fidelity Wireframe</a> - Movie Theater Seat Reservation App</h3>
         <div class="wireframe-content">
             <a href="work_pages/workpage_wireframe.html" target="_blank">
-                <img id="wf2" src="images/wireframe2.png" alt="Low Fidelity Wireframe">
+                <img src="images/wireframe2.png" alt="Low Fidelity Wireframe">
             </a>
             <p>
                 This low fidelity wireframe showcases the user flow for a movie theater seat reservation app. It focuses on the initial layout and structure, providing a visual blueprint for the application's development and user journey.<br><br><a href="https://www.figma.com/file/dY8mfhdevrFzYAr4uzM9Et/Movie-Theatre-Seat-Reservation-App-Wireframe?type=design&node-id=0%3A1&mode=design&t=XCUlokqvzAu33fIE-1" target="_blank"> Figma In-browser viewer</a>
@@ -75,7 +125,7 @@
         <br><br><a href="https://www.figma.com/proto/dY8mfhdevrFzYAr4uzM9Et/Movie-Theatre-Seat-Reservation-App-Wireframe?type=design&node-id=86-422&t=exfa1zoPlmXSRSSm-1&scaling=min-zoom&page-id=3%3A106&starting-point-node-id=86%3A422&mode=design" target="_blank">Prototype View</a></p>
         </div>
     </div>
-    <div class="hfwf" id="lofi">
+    <div class="hfwf">
         <h3><a href="https://docs.google.com/presentation/d/1CSX2SpZobGmPlRq8hAS9Ds-O0HZnjBEZR1t3AlkI_ec/edit?usp=sharing"  target="_blank">Case Study</a> - Movie Seat Reservation App</h3>
         <div class="wireframe-content">
             <div class="content-container">
@@ -87,7 +137,7 @@
                 </div>
         </div>
     </div>
-
+    </div>
     <div class="hfwf" id="web">
         <h3><a href="https://www.figma.com/file/dY8mfhdevrFzYAr4uzM9Et/Movie-Theatre-Seat-Reservation-App-Wireframe?type=design&node-id=153%3A275&mode=design&t=XCUlokqvzAu33fIE-1" target="_blank">Website Mockup</a> - Movie Theater Seat Reservation App</h3>
         <div class="wireframe-content">
@@ -98,19 +148,19 @@
                 <br><br><a href="https://www.figma.com/proto/dY8mfhdevrFzYAr4uzM9Et/Movie-Theatre-Seat-Reservation-App-Wireframe?type=design&node-id=157-396&t=XCUlokqvzAu33fIE-0&scaling=scale-down&page-id=153%3A275&starting-point-node-id=157%3A396" target="_blank">Prototype View</a></p>
         </div>
     </div>
-    <div class="hfwf" id="webslide">
+    <div class="hfwf">
         <h3><a href="https://docs.google.com/presentation/d/1RUCRUYLxFh5OhTaP9ljkBRTROtWQFuT8pX9EW8vnLE0/edit?usp=sharing"  target="_blank">Case Study</a> - Movie Seat Reservation App</h3>
         <div class="wireframe-content">
             <div class="content-container">
                 <div class="slides-container">
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRsuiFSJHf7U7Xtr43xODr6e4Z4lJoXPM8GPZoLpNKnHyJsX3LgSiPuNBLcTNdCglv72Bd1wD3Acyuv/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRsuiFSJHf7U7Xtr43xODr6e4Z4lJoXPM8GPZoLpNKnHyJsX3LgSiPuNBLcTNdCglv72Bd1wD3Acyuv/embed?start=false&loop=false&delayms=3000" width="960" height="569" ></iframe>
                     <div class="text">
                         <p>This is my case study for the website of my movie theater seat reservation app. It contains the same user journeys, audits, and personas as my mobile app but diverges to express my design process for the website.  <br><br>Ctrl+Shift+F for Fullscreen</p>
                     </div>
                 </div>
         </div>
     </div>
-    
+    </div>
     <div class="hfwf" id="empathy">
         <h3><a href="https://www.figma.com/file/jtmd1cJM1zuaIr87MEgOIX/Empathy?type=design&node-id=16%3A1986&mode=design&t=iePh46SWaV3xyjHl-1" target="_blank">Dialogue App Prototype</a> - Empahetic Communication App</h3>
         <div class="wireframe-content">
@@ -122,28 +172,28 @@
         </div>
     </div>
 
-    <div class="hfwf" id="webslide">
+    <div class="hfwf">
         <h3><a href="https://docs.google.com/presentation/d/1tq84hg_vdDt8bhaBQppTx4NGHPpm2C0SQrZuPNEy5J4/edit?usp=sharing"  target="_blank">Case Study</a> - Empahetic Communication App</h3>
         <div class="wireframe-content">
             <div class="content-container">
                 <div class="slides-container">
-                    <iframe class="last" src="https://docs.google.com/presentation/d/e/2PACX-1vSwB2vljftsaBsqX8ojuWurOrq2xnEuzgj3Ta3yTURNfhmKmZxKcX-aV9HEuaCGyVxyNhZ40NlmHs6-/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="last" src="https://docs.google.com/presentation/d/e/2PACX-1vSwB2vljftsaBsqX8ojuWurOrq2xnEuzgj3Ta3yTURNfhmKmZxKcX-aV9HEuaCGyVxyNhZ40NlmHs6-/embed?start=false&loop=false&delayms=3000" width="960" height="569" ></iframe>
                     <div class="text">
                         <p>This is the case study for an application that teaches empathetic communication to help individuals communicate more effectively, whether it be interpersonal or for business. It contains user journeys, personas, insights, and prototype frames.  <br><br>Ctrl+Shift+F for Fullscreen</p>
                     </div>
                 </div>
         </div>
     </div>
+    </div>
     <div class="websiteborder">
-    <div class="hfwf" id="portfolio">
+    <div class="hfwf" id="portfolio1">
         <h3><a href="https://nickjohnsondesign.github.io/Resume/design.html">This Website!</a> </h3>
         <div class="wireframe-content">
             <a href="https://nickjohnsondesign.github.io/artprompt/" target="_blank">
-                <img style="border: 3px solid black" id="wf2" src="Work_Samples/portfolio.png" alt="this website image">
+                <img style="border: 3px solid black"  src="Work_Samples/portfolio.png" alt="this website image">
             </a>
             <p>
-               I made this portfolio website by myself, mostly with CSS and HTML and one javascript file for the return-to-top button functionality just so it was easier to apply to every page and have it work consistently and the same throughout.  
-            </p>
+               I made this portfolio website by myself, written in CSS, HTML and JavaScipt
         </div>
     </div>
 </div>
