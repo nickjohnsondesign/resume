@@ -1,6 +1,58 @@
 /* stylesheets/webdesignstyle.css */
+.light-logo {
+  display: none; /* Hidden by default */
+}
 
+.dark-mode .light-logo {
+  display: none; /* Still hidden in dark mode */
+}
+
+.dark-mode .dark-logo {
+  display: block; /* Show dark mode logo */
+}
+
+.light-mode .light-logo {
+  display: block; /* Show light mode logo */
+}
+
+.light-mode .dark-logo {
+  display: none; /* Hide dark mode logo */
+}
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Roboto:wght@300&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Zen+Maru+Gothic&family=Zilla+Slab:wght@300;400&display=swap');
+body.light-mode {
+  --text-color: #575757;
+  --border-color: #ddd;
+  background-color: #fff;
+
+  
+  a:link {
+    color: #575757; 
+  }
+
+  h1, h2, h3, p, ul {
+    color: var(--text-color); 
+  }
+}
+.highlight, .highlight2, .highlight3 {
+  color: var(--highlight-color);
+  background-color: var(--highlight-bg);
+}
+.dark-mode .highlight, .highlight2, .highlight3 {
+  color: #FAB42A;
+}
+
+.light-mode .page-nav {
+  background-color: #fff; 
+  color: #000; 
+}
+
+.light-mode .page-nav a {
+  color: #007bff; 
+}
+.light-mode .toggle-button {
+  background-color: #fff;
+  color: #000; 
+}
 header {
     margin-left: 20px;
     background-color: #111111;
@@ -40,7 +92,7 @@ ul {
 }
 
 li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -322,7 +374,7 @@ footer a:last-child {
   }
   header {
   margin-left: 20px;
-  background-color: #111111;
+ 
   border-bottom: #37EEFB solid 1px;
   }
   
@@ -330,13 +382,18 @@ footer a:last-child {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    text-align: center;
+    font-size: 1.5em;
+  
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent the nav items from wrapping */
+    width: 100%;
+  
   }
   
   .main-nav ul {
     list-style: none;
     padding: 0;
-    
+    display: flex;
   }
   
   .main-nav ul li {
@@ -482,4 +539,153 @@ footer a:last-child {
     padding-right: 4.5px;
     background-color: black;
   }
+}
+@media (max-width: 425px) {
+  /* Ensure highlight colors work in mobile view */
+  .highlight,
+  .highlight2,
+  .highlight3 {
+    color: var(--highlight-color);
+    background-color: var(--highlight-bg);
+  }
+
+  /* Light Mode Styles */
+  body.light-mode {
+    --text-color: #575757;
+    --border-color: #ddd;
+    background-color: #fff;
+    color: var(--text-color); /* Adjust text color for light mode */
+  }
+
+  a:link {
+    color: #575757; /* Update link color for light mode */
+  }
+
+  h1, h2, h3, p, ul {
+    color: var(--text-color); /* Apply light mode color to text elements */
+  }
+
+  /* Dark Mode Styles */
+  body.dark-mode {
+    --highlight-color: #FAB42A;
+    --highlight-bg: #333;
+    background-color: #111;
+    color: azure; /* Use bright text for dark mode */
+  }
+
+  .dark-mode .highlight, 
+  .dark-mode .highlight2, 
+  .dark-mode .highlight3 {
+    color: #FAB42A;
+    background-color: #333; /* Use darker background for highlights in dark mode */
+  }
+
+  /* Adjust slider for mobile view */
+  .theme-toggle {
+    right: 15px; /* Adjust position for smaller screens */
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2; /* Ensure it stays on top */
+  }
+
+  .switch {
+    width: 45px; /* Smaller switch for mobile view */
+    height: 25px;
+  }
+
+  .slider:before {
+    width: 18px; /* Adjust size of slider knob for mobile */
+    height: 18px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+  /* Adjust the text in the page for better readability on small screens */
+  .highlight {
+    font-size: 1.1em;
+  }
+
+  .highlight2 {
+    font-size: 1.0em;
+  }
+
+
+  /* Make sure the layout is still responsive with a fluid design */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center;
+    padding: 0;
+  }
+
+  .main-nav ul li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .main-nav ul li a {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Sub-navigation for mobile */
+  .sub-nav {
+    display: none;
+    position: relative;
+    background-color: #111;
+    font-size: 1em;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .main-nav ul li:hover .sub-nav {
+    display: block;
+  }
+
+  /* Mobile footer adjustments */
+  footer {
+    font-size: 1.15em; /* Adjust font size */
+    padding: 1em;
+  }
+
+  footer img {
+    width: 40px; /* Slightly smaller footer icon */
+    height: 40px;
+  }
+
+  /* Ensure all wireframe content stays aligned */
+  .wireframe-content img {
+    width: 100%; /* Full-width images for better mobile layout */
+    height: auto;
+  }
+
+  /* Ensure the theme toggle button stays accessible and user-friendly */
+  .scrollToTopBtn {
+    bottom: 15px; /* Adjust position to not overlap content */
+    right: 15px;
+    width: 50px; /* Make the button smaller for mobile */
+    height: 50px;
+    background-size: 25px; /* Adjust the icon size for mobile */
+  }
+
+  /* Adjust iframe sizes for mobile view */
+  .slides-container iframe {
+    width: 100%;
+    height: 250px; /* Adjust iframe size */
+    background-color: black;
+  }
+}
+.highlight2 {
+  font-size: 1.35em;
+  font-weight: bold;
+  line-height: 1.5em;
+  border-bottom: 1px var(--highlight-color) solid;
+}
+.highlight3 {
+  font-size: 1.55em;
+  font-weight: bold;
+  line-height: 1.5em;
 }

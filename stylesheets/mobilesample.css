@@ -270,3 +270,194 @@ a:link
     .centered-images a {
       text-align: center;
     }
+        
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+      text-align: right;
+      justify-content: right;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 25px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #FAB42A;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(25px);
+    }
+    .theme-toggle {
+      position: relative; /* Fix it relative to the viewport */
+  
+      z-index: 999;    /* Keep it above other elements */
+      text-align: right;
+      color: var(--highlight-color);
+    }
+    .light-logo, .dark-logo {
+      width: 100%; 
+      height: auto; 
+      display: none; 
+      object-fit: contain; 
+    }
+    .dark-mode .light-logo {
+      display: none; /* Still hidden in dark mode */
+    }
+    
+    .dark-mode .dark-logo {
+      display: block; /* Show dark mode logo */
+    }
+    
+    .light-mode .light-logo {
+      display: block; /* Show light mode logo */
+    }
+    
+    .light-mode .dark-logo {
+      display: none; /* Hide dark mode logo */
+    }
+     
+    body.light-mode {
+      --text-color: #575757;
+      --border-color: #444;
+      background-color: #fff;
+      --highlight-color: #575757;  
+      --highlight-bg: transparent;
+      
+    }
+      a:link {
+        color: #575757; 
+      }
+      body.dark-mode {
+        --text-color: #ddd;
+        --border-color: #37EEFB; 
+        background-color: #111111;
+        --highlight-color: #575757; 
+        --highlight-bg: transparent; 
+      }
+      
+      h1, h2, h3, p, ul {
+        color: var(--text-color); 
+      }
+    
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+    body.dark-mode {
+      --text-color: #ddd;
+
+      background-color: #111111;
+        
+      --highlight-bg: transparent; /* Dark mode background */
+    }
+      .highlight3 .light-mode {
+        --text-color: #ddd;
+        background-color: #111111;
+      }
+      .light-mode .highlight3 {
+        color: #575757; /* Light mode color */
+        background-color: #f9f9f9;
+      }
+      .highlight2 .light-mode {
+        --text-color: #ddd;
+        background-color: #111111;
+      }
+      .light-mode .highlight2 {
+        color: #575757; /* Light mode color */
+        background-color: #f9f9f9;
+      }
+      .dark-mode .highlight3 {
+        color: #FAB42A; /* Dark mode color */
+        background-color: transparent;
+      }
+    .dark-mode h3 {
+      border-top: 1px solid var(--border-color);
+      --text-color: #FAB42A;
+    }
+    .dark-mode h1 {
+    
+      --text-color: #FAB42A;
+    }
+    
+    .dark-mode .page-nav, 
+    .dark-mode .sub-nav, 
+    .dark-mode footer {
+      border-left: none;  /* Remove left border */
+      border-right: none; /* Remove right border */
+      border-top: 1px solid var(--border-color);
+      
+    }
+    
+
+    * {
+      border-color: var(--border-color);
+      
+    }
+    .highlight, .highlight2, .highlight3 {
+      color: var(--highlight-color);
+      background-color: var(--highlight-bg);
+    }
+    .dark-mode .highlight, .highlight2, .highlight3 {
+      color: #FAB42A;
+    }
+    .page-nav, .sub-nav {
+      
+      border: 1px solid var(--border-color);
+      border-left: none;  /* Remove left border */
+      border-right: none;
+    }
+    .light-mode .page-nav {
+      background-color: #fff; 
+      color: #000; 
+    }
+    
+    .light-mode .page-nav a {
+      color: var(--highlight-color);
+    }
+    .light-mode .toggle-button {
+      background-color: #fff;
+      color: #000; 
+    }
+    header{
+      color: var(--highlight-color);
+
+    }
+    .column img {
+      border-radius: 1.5em; 
+    }
+    .image-container {
+      background-color: rgba(0, 0, 0, 0.088); /* Darker background */
+
+      border-radius: 4px;
+      
+      width: 100%;
+    }
