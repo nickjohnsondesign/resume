@@ -116,8 +116,9 @@ body.dark-mode {
 }
 
 .light-mode .page-nav a {
-  color: #007bff; 
-}
+  color: var(--highlight-color);
+  }
+
 .light-mode .toggle-button {
   background-color: #fff;
   color: #000; 
@@ -133,8 +134,8 @@ a:link {
     text-decoration: underline;
   }
   a:hover, a:focus {
-    color:#FAB42A;
-    text-shadow: 0 0 2px #ffd500, 0 0 5px rgba(98, 198, 245, 0.15);
+    color: 1px solid var(--border-color);
+  
 }
 
   ul{
@@ -206,7 +207,10 @@ a:link {
           font-family: 'Fira Sans Condensed', sans-serif;
           }
  
-  footer {border-top: 1px solid var(--border-color);;  text-align: center;  padding-top: 1em; 
+  footer {
+    border-top: 1px solid var(--border-color);  
+    text-align: center;  
+    padding-top: 1em; 
     } 
     
   h3 { 
@@ -223,11 +227,14 @@ a:link {
           font-family: 'Roboto', sans-serif;
           }
           
-  footer {   text-align: center;  padding-top: 1em; 
+  footer {   
+      text-align: center;  
+      padding-top: 1em; 
           }
-footer img{
-  width: 6em; height: 6em;
-}
+  footer img{
+      width: 6em; 
+      height: 6em;
+  }
   img{
       text-align: center;
   }
@@ -412,7 +419,7 @@ padding-bottom: 1em;
 header {
   margin-left: 1em;
   
-  padding-top: 20px; 
+  padding-top: .75em; 
   
 }
 
@@ -472,7 +479,7 @@ header {
   display: block; 
 }
 .main-nav ul li:hover, .main-nav ul li a:hover {
-  color: #FAB42A;
+  
   transition: background-color 0.3s;
 }
 .centered-text {
@@ -519,8 +526,8 @@ header {
     text-wrap: nowrap;
     background-color: #111111;
     font-size: 1.25em;
-    padding-top: 7.5px;
-    padding-bottom: 14px;
+    padding-top: .75em;
+    padding-bottom: .75em;
     overflow-x: auto;
   border-top: 1px solid var(--border-color);
   transition: background-color 0.5s, color 0.5s;
@@ -559,8 +566,10 @@ header {
 }
 
 .page-nav a:hover {
-  color: #FAB42A;
+    color: 1px solid var(--border-color);
+  text-shadow: 1px solid var(--border-color); ;
 }
+
 #illustrations-designs{
   border-bottom: #37EEFB 1px solid;
   padding-bottom: 1.1em;

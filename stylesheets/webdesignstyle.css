@@ -258,8 +258,6 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.25em;
     font-size: 2.5em;
-
-    padding-top: .6em;
 }
 
 h5 {
@@ -276,9 +274,13 @@ h2 {
     font-family: 'Fira Sans Condensed', sans-serif;
     }
 
-footer {border-top: 1px solid var(--border-color);;  text-align: center;  padding-top: 1em; 
-} 
-
+footer {
+  border-top: 1px solid var(--border-color);  
+  text-align: center;  
+  padding-top: 1em; 
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
     @media (min-width: 1024px) {
     .wireframe-content a{
       text-align: left;
@@ -306,11 +308,7 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-footer {
-    text-align: center;
-    padding-top: 1em;
-    font-size: 1.5em;
-   margin-bottom: 2em; }
+
    
 
 
@@ -483,9 +481,9 @@ footer a:last-child {
   transform: translateY(0);
 }
   header {
-  margin-left: 20px;
+  margin-left: 1em;
 
-  padding-top:20px;
+  padding-top: .75em;
   }
   
 .main-nav {
@@ -591,8 +589,8 @@ footer a:last-child {
     text-wrap: nowrap;
     background-color: #111111;
     font-size: 1.25em;
-    padding-top: 7.5px;
-    padding-bottom: 14px;
+    padding-top: .75em;
+    padding-bottom: .75em;
     overflow-x: auto;
   border-top: 1px solid var(--border-color);
   transition: background-color 0.5s, color 0.5s;
@@ -631,7 +629,7 @@ footer a:last-child {
 }
 
 .page-nav a:hover {
-  color: #FAB42A;
+  color: var(--text-color); 
 }
   .centered-text {
     display: flex;

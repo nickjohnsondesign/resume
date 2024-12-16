@@ -1,4 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap');
+.dark-mode .page-nav, 
+.dark-mode .sub-nav, 
+.dark-mode footer {
+  border-left: none;  /* Remove left border */
+  border-right: none; /* Remove right border */
+  border-top: 1px solid var(--border-color);
+}
+.page-nav, .sub-nav {
+  border: 1px solid var(--border-color);
+  border-left: none;  /* Remove left border */
+  border-right: none;
+  display: flex;
+  text-wrap: nowrap;
+  background-color: #111111;
+  font-size: 1.25em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.5s, color 0.5s;
+  justify-content: space-around;
+}
+.page-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  
+}
+@media (min-width: 1921px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1.5em;
+  }
+  }
+
+
+@media (max-width: 1919px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1920px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1.35em;
+  }
+}
+.page-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-nav a:hover {
+    color: 1px solid var(--border-color);
+  text-shadow: 1px solid var(--border-color); ;
+}
+
+.light-mode .page-nav {
+  background-color: #fff; 
+  color: #000; 
+}
+.light-mode .page-nav a {
+  color: var(--highlight-color);
+}
+
 a:link 
 {
     color: #c5fdfd;
@@ -28,7 +94,7 @@ a:link
       font-size: 30px;
       justify-content: center;
       padding-bottom: .2em;
-      padding-top: .5em;
+      padding-top: .15em;
 
       color:#FAB42A;
       border-bottom: 1px solid var(--border-color);
@@ -177,7 +243,7 @@ a:link
     header {
     margin-left: 20px;
     color: var(--highlight-color);
-    
+    padding-top: .75em;
     }
     
     .main-nav {
@@ -426,7 +492,12 @@ a:link
       background-color: #fff;
       --highlight-color: #575757;  
       --highlight-bg: transparent;
-      
+    }
+          .light-mode {
+        font-family: sans-serif;
+        background-color: #f9f9f9; /* Light background */
+        color: #000000;           /* Dark text for contrast */
+        margin: 0 10%;
     }
       a:link {
         color: #575757; 
