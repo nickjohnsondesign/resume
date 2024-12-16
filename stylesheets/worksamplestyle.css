@@ -504,10 +504,8 @@ a:link
       }
       body.dark-mode {
         --text-color: #ddd;
-        --border-color: #37EEFB; 
+        --border-color: #37EEFB; /* Dark mode border color */
         background-color: #111111;
-        --highlight-color: #575757; 
-        --highlight-bg: transparent; 
       }
       
       h1, h2, h3, p, ul {
@@ -606,3 +604,47 @@ a:link
       
       width: 100%;
     }
+    @media (max-width: 767px) {
+      .dark-mode{
+        font-family: sans-serif; 
+        background-color: #111111;
+        color: #ddd;
+        font-size: .35em;
+      }
+    }
+    @media (max-width: 768px) {
+      .dark-mode{
+        font-family: sans-serif; 
+        background-color: #111111;
+        color: #ddd;
+        margin: 0 2%;
+         
+        }
+      }
+      @media (max-width: 1921px) {
+        .dark-mode{
+          font-family: sans-serif; 
+          background-color: #111111;
+          color: #ddd;
+          margin: 0 10%;
+           
+          }
+        }
+        @media (min-width: 1921px) {
+          .dark-mode{
+            font-family: sans-serif; 
+            background-color: #111111;
+            color: #ddd;
+            margin: 0 10%;
+             
+            }
+          }
+          @media (max-width: 768px) {
+            .dark-mode{
+              font-family: sans-serif; 
+              background-color: #111111;
+              color: #ddd;
+              
+               
+              }
+            }

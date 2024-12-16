@@ -61,12 +61,6 @@ body.light-mode {
   a:link {
     color: #003a90; 
   }
-  body.dark-mode {
-    --text-color: #ddd;
-    --border-color: #37EEFB; /* Dark mode border color */
-    background-color: #111111;
-  }
-  
   h1, h2, h3, p, ul {
     color: var(--text-color); 
   }
@@ -78,7 +72,6 @@ body.dark-mode {
   --text-color: #ddd;
   --border-color: #37EEFB; /* Dark mode border color */
   background-color: #111111;
-    
   --highlight-bg: transparent; /* Dark mode background */
 }
   .highlight3 .light-mode {
