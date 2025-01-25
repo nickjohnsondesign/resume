@@ -23,41 +23,6 @@
     
     </ul>
 </nav>
-
-<script>
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('change', () => {
-if (themeToggle.checked) {
-body.classList.add('dark-mode');
-body.classList.remove('light-mode');
-} else {
-body.classList.add('light-mode');
-body.classList.remove('dark-mode');
-}
-});
-window.addEventListener('DOMContentLoaded', (event) => {
-const darkModeToggle = document.querySelector('.switch input');
-const body = document.body;
-
-if (body.classList.contains('dark-mode')) {
-darkModeToggle.checked = true;
-}
-
-darkModeToggle.addEventListener('change', () => {
-if (darkModeToggle.checked) {
-body.classList.add('dark-mode');
-body.classList.remove('light-mode');
-} else {
-body.classList.add('light-mode');
-body.classList.remove('dark-mode');
-}
-});
-});
-
-  themeToggleBtn.addEventListener('click', toggleTheme);
-</script>
 </header>
 
 <body>
@@ -71,10 +36,12 @@ body.classList.remove('dark-mode');
 <div id="image-viewer-modal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="modal-image">
+  
   <div class="modal-buttons">
     <button id="prev-btn">&lt; </button>
     <button id="next-btn"> &gt;</button>
   </div>
+  
   <div id="caption"></div>
 </div>
 <div class="thumbnail-container">
@@ -103,36 +70,37 @@ body.classList.remove('dark-mode');
     <div class="row">
       <div class="column">
         <div class="center">
-          <img src="Work_Samples/compost_proj_fixsmaller.png" alt="">
-          <img src="Work_Samples/nicholas_johnson_pathfinder.png" alt="">
-          <img src="Work_Samples/character_design.png" alt="">
-          <img src="Work_Samples/torch.gif" alt="">
-          <img src="Work_Samples/stones.png" alt="">
+          <img src="Work_Samples/compost_proj_fixsmaller.png" alt="Compost Project" title="Compost Project">
+          <img src="Work_Samples/nicholas_johnson_pathfinder.png" alt="Pathfinder Design" title="Pathfinder Design">
+          <img src="Work_Samples/character_design.png" alt="Character Project" title="Character Project">
+          <img src="Work_Samples/torch.gif" alt="Torch Sprite" title="Torch Sprite">
+          <img src="Work_Samples/stones.png" alt="Stones Design" title="Stones Design">
         </div>
       </div>
       <div class="column">
         <div class="center-right">
-          <img src="Work_Samples/Character_design_smaller.png" alt="">
-          <img src="Work_Samples/mockupb.png" alt="">
-          <img src="Work_Samples/fbw.png" alt="">
-          <img src="Work_Samples/Unityprojfinalsmaller.png" alt="">
-          <img src="Work_Samples/NJ_Logo.png" alt="">
-          <img src="Work_Samples/illustrationjaxsmaller.png" alt="">
-          <img src="Work_Samples/gutssmaller.png" alt="">
+          <img src="Work_Samples/Character_design_smaller.png" alt="Character Design" title="Character Design">
+          <img src="Work_Samples/mockupb.png" alt="Mockup Design" title="Mockup Design">
+          <img src="Work_Samples/fbw.png" alt="FBW Design" title="FBW Design">
+          <img src="Work_Samples/Unityprojfinalsmaller.png" alt="Unity Project" title="Unity Project">
+          <img src="Work_Samples/NJ_Logo.png" alt="Logo Design" title="Logo Design">
+          <img src="Work_Samples/illustrationjaxsmaller.png" alt="Jax Illustration" title="Jax Illustration">
+          <img src="Work_Samples/gutssmaller.png" alt="Hatching Project" title="Hatching Project">
         </div>
       </div>        
       <div class="column">
         <div class="center-right">
-          <img src="Work_Samples/womanphotoshop.png" alt="">
-          <img src="Work_Samples/Christmas_card.png" alt="">
-          <img src="Work_Samples/nicholas_johnson_geometricdesign-01.png" alt="">
-          <img src="Work_Samples/Sprite-0005.gif" alt="" class="smaller-knight">
-          <img src="Work_Samples/pixel_tiles.png" alt="">
+          <img src="Work_Samples/womanphotoshop.png" alt="Photoshop Design" title="Photoshop Design">
+          <img src="Work_Samples/Christmas_card.png" alt="Postcard Design" title="Postcard Design">
+          <img src="Work_Samples/nicholas_johnson_geometricdesign-01.png" alt="Geometric Eye" title="Geometric Eye">
+          <img src="Work_Samples/Sprite-0005.gif" alt="Knight Sprite" title="Knight Sprite" class="smaller-knight">
+          <img src="Work_Samples/pixel_tiles.png" alt="Pixel Tiles" title="Pixel Tiles">
         </div> 
       </div>        
     </div>
   </div>
 </div>
+
 
 <footer> <a href="index.html">Back To Main Page</a></footer>
 <button class="scrollToTopBtn" style="background-image: url('thumbnail/arrow.png')" onclick="scrollToTop()"></button>

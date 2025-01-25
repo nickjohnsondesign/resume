@@ -1,6 +1,4 @@
-// Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all thumbnail and larger images
     const thumbnails = document.querySelectorAll(".thumbnail img");
     const largerImages = document.querySelectorAll(".image-container img");
     const modal = document.getElementById("image-viewer-modal");
@@ -10,26 +8,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("prev-btn");
     const nextButton = document.getElementById("next-btn");
 
-    let currentImageIndex = 0; // Index for current image in modal
+    let currentImageIndex = 0;
 
-    // Helper function to open the modal with the correct image
+    // Function to open the modal
     function openModal(imageSrc, captionText) {
-        modalImage.src = imageSrc; // Set modal image source
-        modalCaption.textContent = captionText; // Set caption
-        modal.style.display = "block"; // Show the modal
+        modal.classList.add("show"); // Show the modal
+        modalImage.classList.remove("visible"); // Initially hide image
+        modalImage.src = imageSrc; // Set the new image source
+        modalCaption.textContent = captionText; // Set the caption
+        
+        // Wait for the image source to be set, then show the image with a fade-in effect
+        setTimeout(() => {
+            modalImage.classList.add("visible"); // Fade in the new image
+        }, 50); // Delay slightly to ensure the src is updated before fading in
+
         currentImageIndex = Array.from(largerImages).findIndex(img => img.src === imageSrc);
     }
 
-    // Function to show the next image in the modal
-    function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % largerImages.length;
-        openModal(largerImages[currentImageIndex].src, largerImages[currentImageIndex].alt || "");
+    // Function to close the modal
+    function closeModal() {
+        modal.classList.remove("show");
+        setTimeout(() => {
+            modalImage.src = "";
+            modalCaption.textContent = "";
+        }, 300);
     }
 
-    // Function to show the previous image in the modal
+    // Function to show the next image
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % largerImages.length;
+        const nextImage = largerImages[currentImageIndex];
+        openModal(nextImage.src, nextImage.alt || nextImage.title || "");
+    }
+
+    // Function to show the previous image
     function showPrevImage() {
         currentImageIndex = (currentImageIndex - 1 + largerImages.length) % largerImages.length;
-        openModal(largerImages[currentImageIndex].src, largerImages[currentImageIndex].alt || "");
+        const prevImage = largerImages[currentImageIndex];
+        openModal(prevImage.src, prevImage.alt || prevImage.title || "");
     }
 
     // Add click event to each thumbnail
@@ -49,14 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close the modal when the close button is clicked
-    closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+    closeButton.addEventListener("click", closeModal);
 
     // Close the modal when clicking outside the image
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
-            modal.style.display = "none";
+            closeModal();
         }
     });
 
