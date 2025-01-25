@@ -143,7 +143,11 @@ body.dark-mode {
   background-color: #fff;
   color: #000; 
 }
-
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
   a:visited {
     color: #6910c2;
     background-color: transparent;
@@ -235,7 +239,6 @@ body.dark-mode {
       background-color: #111111;
       color: #ddd;
       font-size: .35em;
-       
       }
       .light-mode {
         font-family: sans-serif;
