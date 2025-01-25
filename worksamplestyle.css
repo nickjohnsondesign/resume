@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Fira+Sans+Condensed:ital,wght@0,400;1,200&display=swap');
+.dark-mode .page-nav, 
+.dark-mode .sub-nav, 
+.dark-mode footer {
+  border-left: none;  /* Remove left border */
+  border-right: none; /* Remove right border */
+  border-top: 1px solid var(--border-color);
+}
+.page-nav, .sub-nav {
+  border: 1px solid var(--border-color);
+  border-left: none;  /* Remove left border */
+  border-right: none;
+  display: flex;
+  text-wrap: nowrap;
+  background-color: #111111;
+  font-size: 1.25em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.5s, color 0.5s;
+  justify-content: space-around;
+}
+.page-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  
+}
+@media (min-width: 1921px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1.5em;
+  }
+  }
+
+
+@media (max-width: 1919px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1920px) {
+  .page-nav li {
+    margin: 0 15px;
+    font-size: 1.35em;
+  }
+}
+.page-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-nav a:hover {
+    color: 1px solid var(--border-color);
+  text-shadow: 1px solid var(--border-color); ;
+}
+
+.light-mode .page-nav {
+  background-color: #fff; 
+  color: #000; 
+}
+.light-mode .page-nav a {
+  color: var(--highlight-color);
+}
+
+a:link 
+{
+    color: #c5fdfd;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited 
+  {
+    color: #1089c2 ;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover, a:focus, a:active {
+    color:#FAB42A;
+    text-shadow: 0 0 2px #ffd500, 0 0 5px rgba(98, 198, 245, 0.15);
+}
+  body{ 
+      background-color: #0f0f0f; 
+   
+  }
+  h1 { 
+      text-align: center;
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold; 
+      text-transform: uppercase; 
+      letter-spacing: 15px;
+      font-size: 30px;
+      justify-content: center;
+      padding-bottom: .2em;
+      padding-top: .6em;
+
+      color:#FAB42A;
+      border-bottom: 1px solid var(--border-color);
+      } 
+          .column {
+            vertical-align: middle;
+            flex: 25%;
+            max-width: 45%;
+            padding: 0 25px;
+            text-align: center;
+          }
+          .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+          }
+          .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+          }
+          footer { border-top: 1px solid var(--border-color);
+            text-align: center;  
+            padding-top: 1em; 
+            font-family: 'Fira Sans Condensed', sans-serif;
+            
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 30px;
+            padding-bottom: 1em;
+  }
+  a:visited {
+    color: #6910c2;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  h2{
+    color:aliceblue;
+    text-align: center;
+ 
+    padding-bottom: 25px;
+  }
+  h2 img{
+  
+    height: 200px;
+  }
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    }}
+
+ 
+
+    .thumbnail img{
+      margin-top: 8px;
+      vertical-align: middle;
+      
+      transition: transform 0.3s; /* Add a smooth transition effect on hover */
+    }
+    .thumbnail img:hover{
+      transform: scale(1.05); /* Scale the image by 10% on hover (adjust as needed) */
+    }
+    .scrollToTopBtn {
+      position: fixed;
+      bottom: 20px; /* Adjust the distance from the bottom as needed */
+      right: 20px; /* Adjust the distance from the right as needed */
+      z-index: 1000; /* Ensure the button is above other content */
+      color: #fff; /* White text color */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 1; /* Make the button visible */
+      transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #FAB42A;
+     /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+      background-size: 30px; /* Adjust the size of the arrow icon */
+      background-repeat: no-repeat;
+      background-position: center; /* Center the arrow icon */
+      animation: fadeIn 0.5s ease;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Show the button when you scroll down */
+    .scrollToTopBtn {
+      position: fixed;
+      bottom: 30px; /* Adjust the distance from the bottom as needed */
+      right: 30px; /* Adjust the distance from the right as needed */
+      z-index: 1000; /* Ensure the button is above other content */
+    
+      color: #fff; /* White text color */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 1; /* Make the button visible */
+      transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #FAB42A;
+     /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+      background-size: 30px; /* Adjust the size of the arrow icon */
+      background-repeat: no-repeat;
+      background-position: center; /* Center the arrow icon */
+      animation: fadeIn 0.5s ease;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Show the button when you scroll down */
+    .show-button {
+      display: block;
+      opacity: 1;
+      transform: translateY(0); /* Optionally, add a scaling effect */
+    }
+    header {
+    margin-left: 20px;
+    color: var(--highlight-color);
+    padding-top: .75em;
+    }
+    
+    .main-nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    
+    .main-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .main-nav ul li {
+      display: inline;
+      position: relative;
+    }
+    
+    .main-nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .main-nav ul li:hover .sub-nav {
+      display: block;
+    }
+    
+    .sub-nav {
+      display: none;
+      position: absolute; /* Position the sub-navigation absolutely */
+      background-color: #111111;
+      z-index: 1;
+      top: 100%; /* Position it below the parent element */
+      left: 0; /* Align it with the left edge of the parent element */
+      font-size: .75em;
+    }
+    
+    .main-nav ul li {
+      display: inline;
+      position: relative; /* Position the parent relative to allow absolute positioning for the sub-navigation */
+    }
+    
+    .sub-nav li {
+      display: block;
+      padding: 10px;
+    }
+    
+    .sub-nav li a {
+      color: #fff;
+      text-decoration: none;
+      display: block; /* Display each item on a new line */
+    }
+    .main-nav ul li:hover, .main-nav ul li a:hover {
+    
+      transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+    .centered-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-item {
+      flex: 1; /* Equal distribution of space among items */
+      text-align: center; /* Center-align the text within each item */
+      padding: 10px; /* Adjust as needed for spacing */
+      list-style-type: none; /* Remove bullet points */
+      position: relative; /* Position for pseudo-elements */
+    
+      /* Customize the glow color and other text styles */
+      font-weight: bold;
+    
+      /* Glowing effect animation */
+      transition: text-shadow 0.3s; /* Add a smooth transition effect */
+    }
+    .nav-item:hover {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adjust the glow color and size as needed */
+    }
+    /* Define the glowing animation */
+    @keyframes glowing {
+      0% {
+        color: #57b1dc; /* Initial text color */
+      }
+      50% {
+        color: #FAB42A; /* Glowing text color */
+      }
+      100% {
+        color: #57b1dc; /* Return to the initial text color */
+      }
+    }
+    .scrollToTopBtn {
+      position: fixed;
+      bottom: 1.5em; /* Adjust the distance from the bottom as needed */
+      right: 1.5em; /* Adjust the distance from the right as needed */
+      z-index: 1000; /* Ensure the button is above other content */
+    
+      color: #fff; /* White text color */
+      border: none;
+      padding: .5em 1em;
+      border-radius: .25em;
+      cursor: pointer;
+      opacity: 1; /* Make the button visible */
+      transition: opacity 0.3s; /* Add a transition for smooth fading in/out */
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      background-color: #FAB42A;
+     /* Replace 'path_to_arrow_up_icon.png' with the actual path to your arrow-up icon */
+      background-size: 1.5em; /* Adjust the size of the arrow icon */
+      background-repeat: no-repeat;
+      background-position: center; /* Center the arrow icon */
+      animation: fadeIn 0.5s ease;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Show the button when you scroll down */
+    .show-button {
+      display: block;
+      opacity: 1;
+      transform: translateY(0); /* Optionally, add a scaling effect */
+    }
+    .thumbnail-container {
+      overflow-x: auto; 
+      white-space: nowrap; 
+      border-bottom: 1px solid var(--border-color);
+      justify-content: space-between; 
+      margin: 0 auto;
+      padding-right: 10px; 
+    }
+    
+    .thumbnail-container a {
+      display: inline-block;
+    }
+    
+    .thumbnail-container::-webkit-scrollbar {
+      width: 12px; 
+      height: 12px; 
+    }
+    
+    .thumbnail-container::-webkit-scrollbar-thumb {
+      background: #a97817;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    
+    .thumbnail-container::-webkit-scrollbar-thumb:hover {
+      background: #FAB42A; 
+      transition: background 0.3s; 
+    }
+    .smaller-knight{
+      height: 1000px;
+      width: 500px;
+      max-width: 500px;
+      height: auto; 
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+      text-align: right;
+      justify-content: right;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 25px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #FAB42A;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(25px);
+    }
+    .theme-toggle {
+      position: relative; /* Fix it relative to the viewport */
+  
+      z-index: 999;    /* Keep it above other elements */
+      text-align: right;
+      color: var(--highlight-color);
+    }
+    .light-logo, .dark-logo {
+      width: 100%; 
+      height: auto; 
+      display: none; 
+      object-fit: contain; 
+    }
+    .dark-mode .light-logo {
+      display: none; /* Still hidden in dark mode */
+    }
+    
+    .dark-mode .dark-logo {
+      display: block; /* Show dark mode logo */
+    }
+    
+    .light-mode .light-logo {
+      display: block; /* Show light mode logo */
+    }
+    
+    .light-mode .dark-logo {
+      display: none; /* Hide dark mode logo */
+    }
+     
+    body.light-mode {
+      --text-color: #575757;
+      --border-color: #444;
+      background-color: #fff;
+      --highlight-color: #575757;  
+      --highlight-bg: transparent;
+    }
+          .light-mode {
+        font-family: sans-serif;
+        background-color: #f9f9f9; /* Light background */
+        color: #000000;           /* Dark text for contrast */
+        margin: 0 10%;
+    }
+      a:link {
+        color: #575757; 
+      }
+      body.dark-mode {
+        --text-color: #ddd;
+        --border-color: #37EEFB; /* Dark mode border color */
+        background-color: #111111;
+      }
+      
+      h1, h2, h3, p, ul {
+        color: var(--text-color); 
+      }
+    
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+    body.dark-mode {
+      --text-color: #ddd;
+
+      background-color: #111111;
+        
+      --highlight-bg: transparent; /* Dark mode background */
+    }
+      .highlight3 .light-mode {
+        --text-color: #ddd;
+        background-color: #111111;
+      }
+      .light-mode .highlight3 {
+        color: #575757; /* Light mode color */
+        background-color: #f9f9f9;
+      }
+      .highlight2 .light-mode {
+        --text-color: #ddd;
+        background-color: #111111;
+      }
+      .light-mode .highlight2 {
+        color: #575757; /* Light mode color */
+        background-color: #f9f9f9;
+      }
+      .dark-mode .highlight3 {
+        color: #FAB42A; /* Dark mode color */
+        background-color: transparent;
+      }
+    .dark-mode h3 {
+      border-top: 1px solid var(--border-color);
+      --text-color: #FAB42A;
+    }
+    .dark-mode h1 {
+    
+      --text-color: #FAB42A;
+    }
+    
+    .dark-mode .page-nav, 
+    .dark-mode .sub-nav, 
+    .dark-mode footer {
+      border-left: none;  /* Remove left border */
+      border-right: none; /* Remove right border */
+      border-top: 1px solid var(--border-color);
+      
+    }
+    
+
+    * {
+      border-color: var(--border-color);
+      
+    }
+    .highlight, .highlight2, .highlight3 {
+      color: var(--highlight-color);
+      background-color: var(--highlight-bg);
+    }
+    .dark-mode .highlight, .highlight2, .highlight3 {
+      color: #FAB42A;
+    }
+    .page-nav, .sub-nav {
+      
+      border: 1px solid var(--border-color);
+      border-left: none;  /* Remove left border */
+      border-right: none;
+    }
+    .light-mode .page-nav {
+      background-color: #fff; 
+      color: #000; 
+    }
+    
+    .light-mode .page-nav a {
+      color: var(--highlight-color);
+    }
+    .light-mode .toggle-button {
+      background-color: #fff;
+      color: #000; 
+    }
+    header{
+      color: var(--highlight-color);
+
+    }
+    .column img {
+      border-radius: 1.5em; 
+    }
+    .image-container {
+      background-color: rgba(0, 0, 0, 0.088); /* Darker background */
+
+      border-radius: 4px;
+      
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      .dark-mode{
+        font-family: sans-serif; 
+        background-color: #111111;
+        color: #ddd;
+        font-size: .35em;
+      }
+    }
+    @media (max-width: 768px) {
+      .dark-mode{
+        font-family: sans-serif; 
+        background-color: #111111;
+        color: #ddd;
+        margin: 0 2%;
+         
+        }
+      }
+      @media (max-width: 1921px) {
+        .dark-mode{
+          font-family: sans-serif; 
+          background-color: #111111;
+          color: #ddd;
+          margin: 0 10%;
+           
+          }
+        }
+        @media (min-width: 1921px) {
+          .dark-mode{
+            font-family: sans-serif; 
+            background-color: #111111;
+            color: #ddd;
+            margin: 0 10%;
+             
+            }
+          }
+          @media (max-width: 768px) {
+            .dark-mode{
+              font-family: sans-serif; 
+              background-color: #111111;
+              color: #ddd;
+              
+               
+              }
+            }
+            .modal {
+              position: fixed;
+              z-index: 9999;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0,0,0,0.9);
+            }
+            .modal-content {
+              display: flex;
+              justify-content: center;
+              max-width: 90vw;
+              max-height: 80vh;
+              object-fit: contain;
+              margin: auto;
+              position: absolute;
+              align-items: center;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .modal-content img {
+              max-width: 100%; 
+              max-height: 100%;
+              object-fit: contain; 
+            }
+            
+            .modal-buttons {
+              position: absolute;
+              bottom: 4em;
+              right: 30em;
+              display: flex;
+              gap: 10px;
+            }
+            
+            #prev-btn, #next-btn {
+              background: none;
+              border: none;
+              padding: 0;
+              cursor: pointer;
+              font-size: 3em;
+              color: white;
+              opacity: 0.7;
+              transition: opacity 0.3s ease;
+            }
+            
+            .modal-arrows {
+              position: absolute;
+   
+              display: flex;
+              gap: 20px;
+              transform-origin: bottom right;
+              transition: all 0.3s ease;
+            }
+            #prev-btn:hover, #next-btn:hover {
+              transform: scale(1.2);
+              opacity: 1;
+            }
+            
+            .close {
+              position: absolute;
+              top: 15px;
+              right: 35px;
+              color: #fff;
+              font-size: 40px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: #bbb;
+              text-decoration: none;
+            }
+            
+            #caption {
+              text-align: center;
+              color: #ccc;
+              padding: 10px;
+              font-size: 18px;
+            }
+            @media (max-width: 768px) {
+              .modal-button {
+                bottom: 2em;
+                right: 2em;
+                gap: 15px;
+              }
+            }
+            
+            @media (max-width: 480px) {
+              .modal-buttons {
+                bottom: 1.5em;
+                right: 1.5em;
+                gap: 10px;
+              }
+            }
+            @media (max-width: 1440px) {
+              .modal-buttons {
+                bottom: em;
+                right: 8em;
+                gap: 10px;
+              }
+            }
+            @media (max-width: 1024px) {
+              .modal-buttons {
+                bottom: em;
+                right: 4em; 
+                gap: 10px;
+              }
+            }
